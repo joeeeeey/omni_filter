@@ -11,31 +11,50 @@ class ColorFilter
   		colorMappingJsonString = File.read "./assets/colorNameMapping.json"
   		colorMapping = JSON.parse(colorMappingJsonString)
 
-  		# key = ARGV[0] || DEFAULT_KEY
-      key = key || DEFAULT_KEYv
+      if key && key != ''
+        items = get_items(key, colorMapping)
+        Output.put(items)     
+      else
+        items = []
+        colorMapping.each {|k, v| items << {:title => "#{k} : #{v}"}}
+        Output.put(items)        
+      end
 
-  		value = get_value(key, colorMapping) || '不存在'
-
-
-  		hash = {
-  			xml: {
-  				items: {
-  					item: {}
-  				}
-  			}
-  		}
-
-  		item = {
-  			:title => value, # 
-  			:subtitle => 'use ENTER or COMMAND+C to paste',
-  			:@arg => value # Use for copying in the clipboard. In order for Alfred workflow objects after the script filter to receive data, we must specify the arg property in the XML item nodes:
-  		}
-
-      Output.put(item)    
 		end
 
-		def get_value(key, colorMapping)
-			return colorMapping[key] || colorMapping["##{key}"]
+		def get_items(key, colorMapping)
+      return {
+              :title => colorMapping[key],
+              :subtitle => "##{key}: use ENTER or COMMAND+C to paste",
+              :@arg => colorMapping[key]
+             } if colorMapping[key]
+
+			return {
+              :title => colorMapping["##{key}"],
+              :subtitle => "##{key}: use ENTER or COMMAND+C to paste",
+              :@arg => colorMapping["##{key}"]
+             } if colorMapping["##{key}"]
+
+      similar_keys = []
+      items = []
+      colorMapping.keys.each do |colorMappingKey|
+        if colorMappingKey.include? key
+          similar_keys << key
+          items << {
+            :title => colorMapping[colorMappingKey],
+            :subtitle => "#{colorMappingKey}: use ENTER or COMMAND+C to paste",
+            :@arg => colorMapping[colorMappingKey]
+          }
+        end
+      end
+
+      if items.size > 0
+        return items
+      else 
+        return [{
+          :title => '不存在', 
+        }]          
+      end
 		end
 	end
 end

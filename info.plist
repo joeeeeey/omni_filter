@@ -63,7 +63,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>sco</string>
+				<string>stc</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -75,7 +75,8 @@
 				<key>runningsubtext</key>
 				<string>查找中...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb {query}</string>
+				<string>/usr/bin/ruby main.rb "color-{query}"
+</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

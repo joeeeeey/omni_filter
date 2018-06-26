@@ -1,4 +1,3 @@
-# require 'gyoku'
 require 'json'
 
 require_relative './utils/output'

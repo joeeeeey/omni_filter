@@ -17,8 +17,26 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 
 ### Debug
 
-ruby main.rb color-""
+/bin/usr/ruby main.rb "color-"
 
+### Alfred xml format
+```ruby
+cat<<EOB
+<?xml version="1.0"?>
+<items>
+<item uid="localip" arg="$LOCAL">
+<title>Local IP: $LOCAL</title>
+<subtitle>Press Enter to paste, or Cmd+C to copy</subtitle>
+<icon>icon.png</icon>
+</item>
+<item uid="externalip" arg="$EXTERNAL">
+<title>External IP: $EXTERNAL</title>
+<subtitle>Press Enter to paste, or Cmd+C to copy</subtitle>
+<icon>icon.png</icon>
+</item>
+</items>
+EOB
+```
 
 ### TODO:
 

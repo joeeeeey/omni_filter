@@ -25,6 +25,7 @@ class ColorFilter
 
 		item = {
 			:title => value, # 
+			:subtitle => 'use ENTER or COMMAND+C to paste',
 			:@arg => value # Use for copying in the clipboard. In order for Alfred workflow objects after the script filter to receive data, we must specify the arg property in the XML item nodes:
 		}
 
@@ -38,12 +39,6 @@ class ColorFilter
 		def get_value(key, colorMapping)
 			return colorMapping[key] || colorMapping["##{key}"]
 		end
-	end
-
-
-
-	def get_value(key, colorMapping)
-		return colorMapping[key] || colorMapping["##{key}"]
 	end
 end
 

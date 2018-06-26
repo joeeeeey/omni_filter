@@ -42,7 +42,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>ColorFilter</string>
+	<string>WorkingFilter</string>
 	<key>objects</key>
 	<array>
 		<dict>

@@ -1,20 +1,25 @@
 ### Introduction
 
-This project is an alfred workflow for filter.
+This project is an [alfred](https://www.alfredapp.com/) workflow for daily working filter based on Ruby.
 
-### Use
+## Getting started
+### Set Up
 
-1. Use keyword `sco` for color filter
+1. download and install [alfred](https://www.alfredapp.com/)
+2. double click `WorkingFilter.alfredworkflow` to install this workflow
 
->TODO:
 
-Add more filters
+### Api List
 
-### Keywords lists
+1. `stt` for all keys search
+2. `stc` for color name filter
 
-1. stc => color
-2. 
 
 ### Debug
 
 ruby main.rb color-""
+
+
+### TODO:
+
+* Add more filters

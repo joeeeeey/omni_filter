@@ -1,0 +1,15 @@
+{
+  "dev_hp": "http://127.0.0.1:8102/",
+  "dev_srp": "http://127.0.0.1:8202/uk/liverpool",
+  "dev_srp_www": "http://127.0.0.1:8201/ja-jp/uk/london",
+  "dev_pp": "http://127.0.0.1:8302/uk/london/p/pure-city",
+  "dev_pp_www": "http://127.0.0.1:8301/zh-cn/uk/london/p/nido-west-hampstead",
+  "dev_sp": "http://127.0.0.1:8602/my-account/dashboard",
+  "dev_sp_www": "http://127.0.0.1:8601/my-account/dashboard",
+  "dev_student-portal": "http://127.0.0.1:8602/my-account/dashboard",
+  "dev_student-portal_www": "http://127.0.0.1:8601/my-account/dashboard",
+  "uat": "https://uat1-cn.dandythrust.com/",
+  "uat_www": "https://uat1-www.dandythrust.com/",
+  "stage": "https://hurricane-cn.dandythrust.com/",
+  "stage_www": "https://hurricane-cn.dandythrust.com/"
+}

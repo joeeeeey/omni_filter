@@ -3,18 +3,23 @@ require 'json'
 require_relative './utils/output'
 require_relative './filters/color_filter'
 require_relative './filters/all_keys_filter'
-
+require_relative './filters/url_filter'
 
 begin
-  # Notice: 在 alfred 输入框中, 每个空格都会增加 ARGV 参数个数
+  # Notice: 在 alfred 输入框中, 每个空格都会增加 ARGV 参数个数?
   # ARGV   
   params = ARGV[0]
-  category = params.split('-')[0]
-  key = params.split('-')[1]
 
+  category, key = params.split('-')
+
+  if key
+    key =  key.split(' ')[0] if key.include?(' ')
+  end
+  
   case category
   when 'color' then ColorFilter.do_filter(key)
-  when 'allkeys' then AllKeysFilter.do_filter(key)  
+  when 'allkeys' then AllKeysFilter.do_filter(key)
+  when 'stw' then UrlFilter.do_filter(key)  
   else
     item = {
       :title => 'Whoop! An unknow keyword', 

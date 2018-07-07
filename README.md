@@ -13,11 +13,11 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 
 1. `stt` for all keys search
 2. `stc` for color name filter
-
+3. `stw` for website filter
 
 ### Debug
 
-/bin/usr/ruby main.rb "color-"
+/usr/bin/ruby main.rb "color-"
 
 ### Alfred xml format
 ```ruby

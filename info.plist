@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>891DD18D-1A89-4A02-88A1-D2A4F03E2919</key>
 		<array>
 			<dict>
@@ -142,7 +155,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>TODO..更多指令</string>
+				<string></string>
 				<key>title</key>
 				<string>开始查找颜色名</string>
 				<key>type</key>
@@ -154,6 +167,72 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>891DD18D-1A89-4A02-88A1-D2A4F03E2919</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>stw</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "stw-{query}"; </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Go to the URL</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>87A559E4-1751-4378-A99E-5F40F391FC8A</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -169,12 +248,26 @@
 			<key>ypos</key>
 			<integer>70</integer>
 		</dict>
+		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
+		<dict>
+			<key>xpos</key>
+			<integer>420</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
 		<key>6125569B-F80C-4518-8375-F06908039270</key>
 		<dict>
 			<key>xpos</key>
 			<integer>460</integer>
 			<key>ypos</key>
 			<integer>60</integer>
+		</dict>
+		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>380</integer>
 		</dict>
 		<key>891DD18D-1A89-4A02-88A1-D2A4F03E2919</key>
 		<dict>

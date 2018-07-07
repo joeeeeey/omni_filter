@@ -49,7 +49,7 @@ class AllKeysFilter
         return items
       else 
         return [{
-          :title => '不存在', 
+          :title => 'Invalid key.', 
         }]          
       end
     end

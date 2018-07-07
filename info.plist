@@ -8,19 +8,6 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>4DADC7A4-F493-4F0D-911F-814DF5C3E6A5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6125569B-F80C-4518-8375-F06908039270</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<array>
 			<dict>
@@ -34,7 +21,20 @@
 				<false/>
 			</dict>
 		</array>
-		<key>891DD18D-1A89-4A02-88A1-D2A4F03E2919</key>
+		<key>color_filter</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6125569B-F80C-4518-8375-F06908039270</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>icon</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -101,7 +101,7 @@
 				<key>runningsubtext</key>
 				<string>查找中...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "allkeys-{query}"</string>
+				<string>/usr/bin/ruby main.rb "allkeys,{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -118,7 +118,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>4DADC7A4-F493-4F0D-911F-814DF5C3E6A5</string>
+			<string>icon</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -148,7 +148,7 @@
 				<key>runningsubtext</key>
 				<string>查找中...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "color-{query}"
+				<string>/usr/bin/ruby main.rb "color,{query}"
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -166,7 +166,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>891DD18D-1A89-4A02-88A1-D2A4F03E2919</string>
+			<string>color_filter</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -215,7 +215,7 @@
 				<key>runningsubtext</key>
 				<string>搜索{query}中…</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "stw-{query}"; </string>
+				<string>/usr/bin/ruby main.rb "stw,{query}"; </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -241,13 +241,6 @@
 	<string>Updated by Andreas Stokholm to be able to handle multiple local IP-addresses.</string>
 	<key>uidata</key>
 	<dict>
-		<key>4DADC7A4-F493-4F0D-911F-814DF5C3E6A5</key>
-		<dict>
-			<key>xpos</key>
-			<integer>140</integer>
-			<key>ypos</key>
-			<integer>70</integer>
-		</dict>
 		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
 		<dict>
 			<key>xpos</key>
@@ -269,12 +262,19 @@
 			<key>ypos</key>
 			<integer>380</integer>
 		</dict>
-		<key>891DD18D-1A89-4A02-88A1-D2A4F03E2919</key>
+		<key>color_filter</key>
 		<dict>
 			<key>xpos</key>
 			<integer>140</integer>
 			<key>ypos</key>
 			<integer>220</integer>
+		</dict>
+		<key>icon</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>70</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

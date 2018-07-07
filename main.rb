@@ -6,20 +6,22 @@ require_relative './filters/all_keys_filter'
 require_relative './filters/url_filter'
 
 begin
-  # Notice: 在 alfred 输入框中, 每个空格都会增加 ARGV 参数个数?
+  # Notice: 英文 ',' 来分隔参数
   # ARGV   
   params = ARGV[0]
 
-  category, key = params.split('-')
+  category, *args = params.split(',')
 
-  if key
-    key =  key.split(' ')[0] if key.include?(' ')
+  if args
+    if args && args.size != 0
+      key, params = args
+    end
   end
-  
+
   case category
   when 'color' then ColorFilter.do_filter(key)
   when 'allkeys' then AllKeysFilter.do_filter(key)
-  when 'stw' then UrlFilter.do_filter(key)  
+  when 'stw' then UrlFilter.do_filter(key, params)  
   else
     item = {
       :title => 'Whoop! An unknow keyword', 

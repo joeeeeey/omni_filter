@@ -11,30 +11,39 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 
 ### Keyword List
 
-> `stt` for filter and go to the website url you want.
-- search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.
+#### 1. stt
 
-Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+##### 1.1 Intro: 
+
+For filter and navigate the website url you want.
+
+##### 1.2 How to search
+
+- 1.2.1 Search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt1.png)
 
+- 1.2.2 Use the autocompele search result in student.com
 
-- use the autocompele search result in student.com
-
-Eg: `stt stage,london`
-
-It will use `london` as the search term. 
+Eg: Type `stt stage,london` in alfred, it will use `london` as the search term.
 
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt2.png)
 
+#### 2. stf
+##### 2.1 Intro: 
 
-> `stf` for filter keys which frequently used.
+For filter keys which frequently used.
+
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stf.png)
 
-> `stc` for filter color keys frequently used, which is a subset of `stf`.
+#### 3. stc 
+##### 3.1 Intro: 
+
+for filter color keys frequently used, which is a subset of `stf`.
 
 ### Debug
-
-run `make test_stt` in the directory。
+1. go to the repo directory in termial.
+2. run `make test_stt`.
 
 ### Alfred xml format
 ```ruby

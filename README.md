@@ -2,12 +2,21 @@
 
 This project is an [alfred](https://www.alfredapp.com/) workflow for daily working filter based on Ruby.
 
-# Getting started
-## Set Up
+## Getting started
+### Set Up
 
-1. Download and install [alfred](https://www.alfredapp.com/).
-2. Double click `WorkingFilter.alfredworkflow` to install this workflow.
+Use repo. 
 
+1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+2. open termial
+3. run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`
+4. git clone this repo.
+
+Use binary file.
+
+1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+2. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
+3. Double click `WorkingFilter.alfredworkflow` to install this workflow.
 
 ## Keyword List
 

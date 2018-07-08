@@ -11,35 +11,31 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 
 ### Keyword List
 
-#### 1. stt
-
-##### 1.1 Intro: 
+## 1. stt
 
 For filter and navigate the website url you want.
 
-##### 1.2 How to search
+### How to search
 
-- 1.2.1 Search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+- 1.1 Search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
 
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt1.png)
 
-- 1.2.2 Use the autocompele search result in student.com
+- 1.2 Use the autocompele search result in student.com
 
 Eg: Type `stt stage,london` in alfred, it will use `london` as the search term.
 
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt2.png)
 
-#### 2. stf
-##### 2.1 Intro: 
+## 2. stf
 
 For filter keys which frequently used.
 
 ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stf.png)
 
-#### 3. stc 
-##### 3.1 Intro: 
+## 3. stc 
 
-for filter color keys frequently used, which is a subset of `stf`.
+For filter color keys frequently used, which is a subset of `stf`.
 
 ### Debug
 1. go to the repo directory in termial.

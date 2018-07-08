@@ -29,7 +29,7 @@ It will use `london` as the search term.
 
 ### Debug
 
-/usr/bin/ruby main.rb "color-"
+make test_stt
 
 ### Alfred xml format
 ```ruby

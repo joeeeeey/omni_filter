@@ -1,8 +1,5 @@
-stt:
-	/usr/bin/ruby main.rb "color,"
+test_stt:
+	/usr/bin/ruby main.rb "stt,prod,bd"
 
-stw:
-	/usr/bin/ruby main.rb "stw,srp"
-
-test_stw:
-	/usr/bin/ruby main.rb "stw,srp londo"
+test_sttc:
+	/usr/bin/ruby main.rb "stt,prod,伦敦"	

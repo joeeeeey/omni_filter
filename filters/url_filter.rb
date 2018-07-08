@@ -1,11 +1,17 @@
 require 'json'
-require_relative '../utils/output'
 require 'net/http'
+require_relative '../utils/output'
 
 # ENV
 # 1.dev 2.uat 3.stage 4.prod
 class UrlFilter
-  API_HOST = 'https://cn.student.com/autocomplete'
+  CN_API_HOST = 'https://cn.student.com/autocomplete'
+  DATA_KEYS = [
+    "cities",
+    "universities",
+    "areas",
+    "properties"
+  ]
   class << self
     def do_filter(key, args)
       urlMappingJsonString = File.read "./assets/urlMapping.json"
@@ -16,93 +22,110 @@ class UrlFilter
         Output.put(items)
       else
         items = []
-        urlMapping.each {|k, v| items << {:title => "#{k.upcase}"}}
-        Output.put(items)        
+        urlMapping.each {|k, v| items << {
+          :title => "#{k.upcase}",
+          :subtitle => URI.join(v, "/").to_s,
+          :@arg => v
+          }}
+        Output.put(items)
       end
     end
 
-    def get_search_result(args)
-      city, university = args
-      # baseurl = URI.join(url, "/").to_s
+    # 获取生成 alfred 文档的元素
+    def get_items(input_key, urlMapping, args)
+      matchedKeys = get_matched_keys(urlMapping, input_key)
 
-      path = "?term=#{city}"
-      url = API_HOST + path
-      uri = URI.parse(url)
-
-      body = JSON.parse(Net::HTTP.get(uri))
-
-      # prefix only for universities
-      # TODO: for area, for city
-      universities = body['universities'] || body[:universities]
-
-      urlSuffix = []
-      urlSuffix = universities.map do |x|
-        countrySlug = x['country']['slug']
-        citySlug = x['city']['slug']
-        universitySlug = x['slug']
-        x = { 
-          suffix: "/#{countrySlug}/#{citySlug}/u/#{universitySlug}",
-          name: x['name']
-        }
-      end
-      return urlSuffix
-    end
-
-    # TODO
-    # 完全匹配与匹配结果为 1 个同样处理
-    # 都应进行后续 serach
-    def get_items(key, urlMapping, args)
-      if urlMapping[key]
-        # key 完全匹配
+      if matchedKeys.size == 0
+        return { :title => 'Invalid key.' }
+      elsif matchedKeys.size == 1
+        matchedKey = matchedKeys[0]
         if args && args.size > 0
           searchResult = get_search_result(args)
           items = []
           searchResult.each do |x|
             items << {
-              :title => "#{key.upcase}: #{x[:name]}",
+              :title => "#{matchedKey.upcase}: #{x[:name]}",
               :subtitle => "press ENTER to go",
-              :@arg => "#{urlMapping[key] + x[:suffix]}"
+              :@arg => "#{URI.join(urlMapping[matchedKey], "/").to_s + x[:suffix]}"
             }
           end
-          if items.size > 0
-            return items
-          else
-            return {
-              :title => 'Nothing found. Invalid serach term.',
-              :subtitle => "press ENTER to go",
-              :@arg => urlMapping[key]
-            }
-          end
-        else 
+          return items if items.size > 0
+          return { :title => 'Nothing found. Invalid serach term.' } 
+        else
           return {
-            :title => key.upcase,
+            :title => matchedKey.upcase,
             :subtitle => "press ENTER to go",
-            :@arg => urlMapping[key]
-          }
+            :@arg => urlMapping[matchedKey]
+          }   
         end
-      end
-
-      # 相似匹配，过滤后返回列表
-      similar_keys = []
-      items = []
-      urlMapping.keys.each do |urlMappingKey|
-        if urlMappingKey.include? key
-          similar_keys << key
+      else
+        items = []
+        matchedKeys.each do |matchedKey|
           items << {
-            :title => "#{urlMappingKey.upcase}",
+            :title => "#{matchedKey.upcase}",
             :subtitle => "press ENTER to go",
-            :@arg => "#{urlMapping[urlMappingKey]}"
+            :@arg => "#{urlMapping[matchedKey]}"
+          }       
+        end
+        return items
+      end
+    end
+
+    private
+    # 获得 api 请求的结果
+    def get_search_result(args)
+      city, university = args
+      path = "?term=#{URI::encode(city)}"
+      url = CN_API_HOST + path
+      uri = URI.parse(url)
+      body = JSON.parse(Net::HTTP.get(uri))
+      return wrap_url_suffix(body)
+    end
+
+    def wrap_url_suffix(body)
+      urlSuffix = []
+      DATA_KEYS.each do |data_key|
+        data = body[data_key] || body[data_key.to_sym]
+        urlSuffix += data.map do |x|
+          countrySlug = x['country']['slug']
+          citySlug = x['city']['slug'] if x['city'] 
+          selfSlug = x['slug']
+          suffix = case data_key
+                   when 'universities'
+                    "/#{countrySlug}/#{citySlug}/u/#{selfSlug}"
+                   when 'cities'
+                    "/#{countrySlug}/#{selfSlug}"
+                   when 'areas' 
+                    "/#{countrySlug}/#{citySlug}/#{selfSlug}"
+                   when 'properties' 
+                    "/#{countrySlug}/#{citySlug}/p/#{selfSlug}"
+                   end
+
+          x = { 
+            suffix: suffix,
+            name: x['name']
           }
         end
       end
-
-      if items.size > 0
-        return items
-      else 
-        return [{
-          :title => 'Invalid key.', 
-        }]          
+      return urlSuffix
+    end
+    
+    # 根据 input 内容过滤 json 中的 key
+    def get_matched_keys(urlMapping, input_key)
+      input_key = input_key.downcase
+      matchedKeys = []
+      if urlMapping[input_key]
+        matchedKeys << input_key
+      else
+        # 相似匹配
+        # TODO 更智能
+        urlMapping.keys.each do |urlMappingKey|
+          if urlMappingKey.include? input_key
+            matchedKeys << urlMappingKey
+          end
+        end
       end
+      return matchedKeys
     end
   end
 end

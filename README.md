@@ -9,11 +9,23 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 2. double click `WorkingFilter.alfredworkflow` to install this workflow
 
 
-### Api List
+### Keyword List
 
-1. `stt` for all keys search
-2. `stc` for color name filter
-3. `stw` for website filter
+> `stt` for filter and go to the website url you want.
+- search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.
+
+Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+
+- use the autocompele search result in student.com
+
+Eg: `stt stage,london`
+It will use `london` as the search term. 
+
+
+> `stf` for filter keys which frequently used.
+
+
+> `stc` for filter color keys frequently used, which is a subset of `stf`.
 
 ### Debug
 

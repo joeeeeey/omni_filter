@@ -62,7 +62,7 @@
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
@@ -89,7 +89,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>stt</string>
+				<string>stf</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -203,7 +203,7 @@
 				<key>escaping</key>
 				<integer>126</integer>
 				<key>keyword</key>
-				<string>stw</string>
+				<string>stt</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -215,7 +215,7 @@
 				<key>runningsubtext</key>
 				<string>搜索{query}中…</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "stw,{query}"; </string>
+				<string>/usr/bin/ruby main.rb "stt,{query}"; </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>

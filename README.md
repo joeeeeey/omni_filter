@@ -1,15 +1,15 @@
-### Introduction
+# Introduction
 
 This project is an [alfred](https://www.alfredapp.com/) workflow for daily working filter based on Ruby.
 
-## Getting started
-### Set Up
+# Getting started
+## Set Up
 
 1. Download and install [alfred](https://www.alfredapp.com/).
 2. Double click `WorkingFilter.alfredworkflow` to install this workflow.
 
 
-### Keyword List
+## Keyword List
 
 ## 1. stt
 
@@ -37,11 +37,11 @@ For filter keys which frequently used.
 
 For filter color keys frequently used, which is a subset of `stf`.
 
-### Debug
+## Debug
 1. go to the repo directory in termial.
 2. run `make test_stt`.
 
-### Alfred xml format
+## Alfred xml format
 ```ruby
 cat<<EOB
 <?xml version="1.0"?>
@@ -60,6 +60,6 @@ cat<<EOB
 EOB
 ```
 
-### TODO:
+## TODO:
 
 * Add more filters

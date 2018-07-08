@@ -5,8 +5,8 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 ## Getting started
 ### Set Up
 
-1. download and install [alfred](https://www.alfredapp.com/)
-2. double click `WorkingFilter.alfredworkflow` to install this workflow
+1. Download and install [alfred](https://www.alfredapp.com/).
+2. Double click `WorkingFilter.alfredworkflow` to install this workflow.
 
 
 ### Keyword List
@@ -15,21 +15,26 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 - search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.
 
 Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt1.png)
+
 
 - use the autocompele search result in student.com
 
 Eg: `stt stage,london`
+
 It will use `london` as the search term. 
+
+![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt2.png)
 
 
 > `stf` for filter keys which frequently used.
-
+![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stf.png)
 
 > `stc` for filter color keys frequently used, which is a subset of `stf`.
 
 ### Debug
 
-make test_stt
+run `make test_stt` in the directory。
 
 ### Alfred xml format
 ```ruby

@@ -10,19 +10,20 @@ require_relative './filters/url_filter'
   # Notice: 英文 ',' 来分隔参数
   # ARGV   
   params = ARGV[0]
+  polishedParams = params.gsub('，', ',')
 
-  category, *args = params.split(',')
+  category, *args = polishedParams.split(',')
 
   if args
     if args && args.size != 0
-      key, params = args
+      key, argParams = args
     end
   end
 
   case category
   when 'color' then ColorFilter.do_filter(key)
   when 'allkeys' then AllKeysFilter.do_filter(key)
-  when 'stt' then UrlFilter.do_filter(key, params)  
+  when 'stt' then UrlFilter.do_filter(key, argParams)  
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 

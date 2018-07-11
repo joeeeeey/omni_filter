@@ -54,7 +54,7 @@ class UrlFilter
         else
           return {
             :title => matchedKey.upcase,
-            :subtitle => "press ENTER to go",
+            :subtitle => "press ENTER to go, or use ',${query}' to search",
             :@arg => urlMapping[matchedKey]
           }   
         end
@@ -101,7 +101,7 @@ class UrlFilter
                     "/#{countrySlug}/#{citySlug}/p/#{selfSlug}"
                    end
 
-          x = { 
+          x = {
             suffix: suffix,
             name: x['name']
           }

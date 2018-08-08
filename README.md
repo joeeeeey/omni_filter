@@ -11,7 +11,12 @@ Use repo.
 2. open termial
 3. run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`
 4. git clone this repo.
+
+`which ruby`
+# Make sure result is  => /usr/bin/ruby
+
 5. Run `sudo gem install activesupport -v 4.2.10`
+6. `sudo gem install builder`
 
 Use binary file.
 

@@ -308,5 +308,9 @@
   "grid-column-count-medium": "12",
   "grid-column-count-large": "12",
   "input-height": "48px",
-  "label-height": "32px"
+  "label-height": "32px",
+  "'Avenir Next W04', 'Avenir Next', Helvetica, Arial, sans-serif":"font-avenir-next",
+  "Helvetica, Arial, sans-serif":"font-system",
+  "Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Microsoft JhengHei, sans-serif":"font-cn",
+  "Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif":"font-cn-traditional"
 }

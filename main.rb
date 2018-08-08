@@ -1,7 +1,9 @@
 # -*- coding: UTF-8 -*-
-
+# require 'bundler/setup'
 require 'json'
-require_relative './activesupport-5.0.0/lib/active_support/core_ext/hash/conversions'
+require 'active_support/all'
+
+# require_relative './activesupport-5.0.0/lib/active_support/core_ext/hash/conversions'
 require_relative './utils/output'
 require_relative './filters/color_filter'
 require_relative './filters/all_keys_filter'

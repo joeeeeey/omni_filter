@@ -33,7 +33,7 @@ class ColorFilter
 
     def get_fully_equal_item(key, colorMapping)
       colorValue = colorMapping[key]
-      value = `./color/colors 'rgb #{hex2rgb(key)}'`
+      value = `cd color && ./colors 'rgb #{hex2rgb(key)}'`
       whole_xml = Hash.from_xml(value)
       whole_xml['items']['item'].unshift({
         title: colorValue,

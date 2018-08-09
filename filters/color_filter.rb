@@ -34,8 +34,12 @@ class ColorFilter
     def get_fully_equal_item(key, colorMapping)
       colorValue = colorMapping[key]
       value = `cd color && ./colors 'rgb #{hex2rgb(key)}'`
-      whole_xml = Hash.from_xml(value)
-      whole_xml['items']['item'].unshift({
+      whole_xml = Hash.from_libxml(value)
+
+      # Hash.from_libxml may return hash key mixed with symbol and string.
+      items = whole_xml['items'] || whole_xml[:items]
+      item = items['item'] || items[:item]
+      item.unshift({
         title: colorValue,
         subtitle: "#{key}: use ENTER or CMD+C to paste",
         arg: colorValue

@@ -6,6 +6,7 @@ require_relative './utils/output'
 require_relative './filters/color_filter'
 require_relative './filters/all_keys_filter'
 require_relative './filters/url_filter'
+require_relative './extension/hash'
 
 # begin
   # Notice: 英文 ',' 来分隔参数

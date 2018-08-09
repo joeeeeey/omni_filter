@@ -11,18 +11,20 @@ Use repo.
 2. open termial
 3. run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`
 4. git clone this repo.
-
-`which ruby`
-# Make sure result is  => /usr/bin/ruby
-
-5. Run `sudo gem install activesupport -v 4.2.10`
-6. `sudo gem install builder`
+5. Make sure result of `which ruby` is `/usr/bin/ruby`, otherwise disable `rvm` or `rbenv`
+6. Run `sudo gem install activesupport -v 4.2.10`
+7. Run `sudo gem install builder`
 
 Use binary file.
 
 1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
 2. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
 3. Double click `WorkingFilter.alfredworkflow` to install this workflow.
+4. Open termial
+5. Make sure result of `which ruby` is `/usr/bin/ruby`, otherwise disable `rvm` or `rbenv`
+6. Run `sudo gem install activesupport -v 4.2.10`
+7. Run `sudo gem install builder`
+
 
 ## Keyword List
 

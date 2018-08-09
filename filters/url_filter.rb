@@ -45,8 +45,8 @@ class UrlFilter
           searchResult.each do |x|
             items << {
               :title => "#{matchedKey.upcase}: #{x[:name]}",
-              :subtitle => "press ENTER to go",
-              :@arg => "#{URI.join(urlMapping[matchedKey], "/").to_s + x[:suffix]}"
+              :subtitle => "#{URI.join(urlMapping[matchedKey], "/").to_s + x[:suffix][1..1000] }",
+              :@arg => "#{URI.join(urlMapping[matchedKey], "/").to_s + x[:suffix][1..1000]}"
             }
           end
           return items if items.size > 0
@@ -54,7 +54,7 @@ class UrlFilter
         else
           return {
             :title => matchedKey.upcase,
-            :subtitle => "press ENTER to go, or use ',${query}' to search",
+            :subtitle => "press ENTER to go, or use ', {searchTerm' to search",
             :@arg => urlMapping[matchedKey]
           }   
         end

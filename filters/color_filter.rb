@@ -10,7 +10,7 @@ class ColorFilter
 
       if key && key != ''
         result = get_items(key, colorMapping)
-        Output.put(result[:items], result[:whole_xml])
+        Output.put(result[:items])
       else
         items = []
         colorMapping.each {|k, v| items << {:title => "#{k} : #{v}"}}
@@ -39,6 +39,8 @@ class ColorFilter
       # Hash.from_libxml may return hash key mixed with symbol and string.
       items = whole_xml['items'] || whole_xml[:items]
       item = items['item'] || items[:item]
+      # p item[0]
+      # p item
       item.unshift({
         title: colorValue,
         subtitle: "#{key}: use ENTER or CMD+C to paste",
@@ -46,8 +48,7 @@ class ColorFilter
       })
 
       return {
-        whole_xml: false,
-        items: whole_xml
+        items: item
       }
     end
 
@@ -83,7 +84,7 @@ class ColorFilter
       else 
         return {
           items: [{
-            :title => 'Invalid key.', 
+            :title => 'Invalid key.',
           }]
         }    
       end

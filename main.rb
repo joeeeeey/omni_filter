@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 # require 'bundler/setup'
 require 'json'
-require 'active_support/all'
 require_relative './utils/output'
 require_relative './filters/color_filter'
 require_relative './filters/all_keys_filter'

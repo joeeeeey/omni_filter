@@ -2,23 +2,32 @@
 require 'json'
 
 class WorkflowXmlWrapper
-	def self.wrap(items=[], wrap_xml_key)
+	def self.wrap(items=[])
     items = [items] if items.is_a? Hash
 
-    return get_xml_from_hash(items, wrap_xml_key)
+    return get_xml_from_hash(items)
 	end
 
-  def self.get_xml_from_hash(items, wrap_xml_key)
-    items = items.map do |x|
-       {
-         arg: x[:@arg],
-         title: x[:title],
-         subtitle: x[:subtitle]
-       }
-    end if wrap_xml_key
+  def self.get_xml_from_hash(items)
+    items.each do |x|
+      x[:arg] = x[:@arg]
+    end
 
-    xml_str = { "items" => { "item" => items } }.to_xml.gsub( / *\n+/, "" )
+    xml_str = "<xml><items>#{get_items_xml_str(items)}</item></items></xml>"
 
     return xml_str
   end
+
+
+  def self.get_items_xml_str(items)
+		str = ''
+    items.each do |item|
+      str +=  "<item #{item[:arg] ? "arg=#{'"' + item[:arg] + '"'}" : ''}>" +
+              "#{item[:icon] ? "<icon>#{item[:icon]}</icon>" : ''} " +
+							"<title>#{item[:title]}</title>" + 
+							"<subtitle>#{item[:subtitle]}</subtitle>" +
+							"</item>"
+		end
+		return str
+	end
 end

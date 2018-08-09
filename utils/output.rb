@@ -1,8 +1,8 @@
 require_relative './workflow_xml_wrapper'
 
 class Output
-  def self.put(items=[], wrap_xml_key=true)
-    xml = WorkflowXmlWrapper.wrap(items, wrap_xml_key)
+  def self.put(items=[])
+    xml = WorkflowXmlWrapper.wrap(items)
 
     puts xml
   end

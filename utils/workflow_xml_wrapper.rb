@@ -10,14 +10,13 @@ class WorkflowXmlWrapper
 
   def self.get_xml_from_hash(items)
     items.each do |x|
-      x[:arg] = x[:@arg]
+      x[:arg] = x[:arg]
     end
 
     xml_str = "<xml><items>#{get_items_xml_str(items)}</item></items></xml>"
 
     return xml_str
   end
-
 
   def self.get_items_xml_str(items)
 		str = ''

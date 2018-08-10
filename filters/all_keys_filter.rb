@@ -22,13 +22,13 @@ class AllKeysFilter
       return {
                :title => allKeysMapping[key],
                :subtitle => "#{key}: use ENTER or CMD+C to paste",
-               :@arg => allKeysMapping[key]
+               :arg => allKeysMapping[key]
              } if allKeysMapping[key]
 
       return {
                :title => allKeysMapping["##{key}"],
                :subtitle => "##{key}: use ENTER or CMD+C to paste",
-               :@arg => allKeysMapping["##{key}"]
+               :arg => allKeysMapping["##{key}"]
              } if allKeysMapping["##{key}"]
 
       # 相似匹配，过滤后返回列表
@@ -40,7 +40,7 @@ class AllKeysFilter
           items << {
             :title => "#{allKeysMappingKey}: #{allKeysMapping[allKeysMappingKey]}",
             :subtitle => "use ENTER or CMD+C to paste",
-            :@arg => "#{allKeysMappingKey}: #{allKeysMapping[allKeysMappingKey]}"
+            :arg => "#{allKeysMappingKey}: #{allKeysMapping[allKeysMappingKey]}"
           }
         end
       end

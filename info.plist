@@ -8,7 +8,33 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -61,23 +87,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>6125569B-F80C-4518-8375-F06908039270</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -115,6 +124,23 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>icon</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6125569B-F80C-4518-8375-F06908039270</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -231,31 +257,29 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>126</integer>
 				<key>keyword</key>
-				<string>ste</string>
+				<string>jira</string>
 				<key>queuedelaycustom</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<false/>
+				<true/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Processing color data...</string>
+				<string>搜索{query}中…</string>
 				<key>script</key>
-				<string>cat&lt;&lt;EOF
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;hash&gt;  &lt;items&gt;    &lt;item type="array"&gt;      &lt;item&gt;        &lt;title&gt;color-tundora&lt;/title&gt;        &lt;subtitle&gt;#4c4c4c: use ENTER or CMD+C to paste&lt;/subtitle&gt;        &lt;arg&gt;color-tundora&lt;/arg&gt;      &lt;/item&gt;      &lt;item&gt;        &lt;title&gt;color-tundora-08&lt;/title&gt;        &lt;subtitle&gt;rgba(#4c4c4c, 0.08): use ENTER or CMD+C to paste&lt;/subtitle&gt;        &lt;arg&gt;color-tundora-08&lt;/arg&gt;      &lt;/item&gt;    &lt;/item&gt;  &lt;/items&gt;&lt;/hash&gt;
-EOF</string>
+				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Convert CSS3 extended named colors</string>
+				<string></string>
 				<key>title</key>
-				<string>CSS Named Color</string>
+				<string>Go to Jira</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -264,7 +288,50 @@ EOF</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>9C68F6AB-5B08-4B38-A0AC-4F296F03A4FA</string>
+			<string>7B811C86-6974-4F19-A2C0-E339714298EA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>stj</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Go to Jira</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -287,33 +354,40 @@ EOF</string>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
+		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>140</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>270</integer>
 		</dict>
-		<key>9C68F6AB-5B08-4B38-A0AC-4F296F03A4FA</key>
+		<key>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>140</integer>
 			<key>ypos</key>
-			<integer>490</integer>
+			<integer>530</integer>
 		</dict>
 		<key>color_filter</key>
 		<dict>
 			<key>xpos</key>
 			<integer>140</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>140</integer>
 		</dict>
 		<key>icon</key>
 		<dict>
 			<key>xpos</key>
 			<integer>140</integer>
 			<key>ypos</key>
-			<integer>70</integer>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

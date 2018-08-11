@@ -41,7 +41,7 @@ class JiraFilter
         if items.size == 0
           items = [
             {
-              :title => "#{JIRA_HOST}ZEN-#{key}",
+              :title => "ZEN-#{key}",
               :subtitle => "Ticket number '#{key}' maynot valid. But you can still press enter and go.",
               :arg => "#{JIRA_HOST}ZEN-#{key}"
             }
@@ -55,15 +55,29 @@ class JiraFilter
             :subtitle => "Begin search...",
           }
         else 
-          cache_data.each {|k, v| items << {
-            :title => "ZEN-#{k}",
-            :subtitle => "First search at: " + (v[:created_at] || v['created_at']),
-            :arg => "#{JIRA_HOST}ZEN-#{k}"
-          }}
+          sort_cache_data(cache_data).each do |x|
+            items << {
+              :title => "ZEN-#{x[:id]}",
+              :subtitle => "First search at: " + (x[:created_at]),
+              :arg => "#{JIRA_HOST}ZEN-#{x[:id]}",
+              :autocomplete => x[:id]
+            }
+          end
         end
 
         Output.put(items)
       end
+    end
+
+    # Sort by created_at DESC
+    def sort_cache_data(cache_data)
+      # cache_data => {'ZEN-4422' => {'created_at' => ''} }
+      array = []
+      cache_data.each do |k, v|
+        array << { id: k, created_at: v[:created_at] || v['created_at']}
+      end
+      # array => [{id: 'ZEN-4422', created_at: ''}]
+      return array.sort_by { |hsh| hsh[:created_at] }.reverse
     end
 
     # 获取生成 alfred 文档的元素
@@ -72,9 +86,10 @@ class JiraFilter
       items = []
       matched_keys.each do |k|
         items << {
-          :title => "#{JIRA_HOST}ZEN-#{k}",
-          :subtitle => cache_data[k][:created_at] || cache_data[k]['created_at'],
-          :arg => "#{JIRA_HOST}ZEN-#{k}"
+          :title => "ZEN-#{k}",
+          :subtitle => "Press enter to go: #{JIRA_HOST}ZEN-#{k}",
+          :arg => "#{JIRA_HOST}ZEN-#{k}",
+          :autocomplete => k
         }
       end
       return items

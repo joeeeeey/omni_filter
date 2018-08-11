@@ -8,6 +8,32 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>1DF4D982-4DB0-47AF-A71F-A04CC46501D8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B811C86-6974-4F19-A2C0-E339714298EA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>55843E32-C787-4559-9E29-BAEDAB3191E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1DF4D982-4DB0-47AF-A71F-A04CC46501D8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
 		<array>
 			<dict>
@@ -295,6 +321,53 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>55843E32-C787-4559-9E29-BAEDAB3191E1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>hotkey</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1DF4D982-4DB0-47AF-A71F-A04CC46501D8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -340,10 +413,30 @@
 	<string>Updated by Andreas Stokholm to be able to handle multiple local IP-addresses.</string>
 	<key>uidata</key>
 	<dict>
+		<key>1DF4D982-4DB0-47AF-A71F-A04CC46501D8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+		<key>55843E32-C787-4559-9E29-BAEDAB3191E1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>github.com</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>440</integer>
+		</dict>
 		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>790</integer>
 			<key>ypos</key>
 			<integer>340</integer>
 		</dict>
@@ -357,21 +450,21 @@
 		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>140</integer>
+			<integer>320</integer>
 			<key>ypos</key>
 			<integer>400</integer>
 		</dict>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>140</integer>
+			<integer>360</integer>
 			<key>ypos</key>
 			<integer>270</integer>
 		</dict>
 		<key>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>140</integer>
+			<integer>320</integer>
 			<key>ypos</key>
 			<integer>530</integer>
 		</dict>

@@ -8,4 +8,7 @@ test_stc:
 	/usr/bin/ruby main.rb "color,#4c4c4c"
 
 test_jira:
-	/usr/bin/ruby main.rb "jira,asd"
+	/usr/bin/ruby main.rb "jira,442"
+
+test_stf:
+	/usr/bin/ruby main.rb "allkeys"

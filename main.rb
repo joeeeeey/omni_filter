@@ -38,6 +38,7 @@ rescue Exception => e
   item = {
     :title => 'SOME ERROR HAPPENED.', 
     :subtitle => "#{e.to_s}",
+    :autocomplete => "#{e.to_s}",
   }
   Output.put(item)
 end

@@ -21,10 +21,10 @@ class WorkflowXmlWrapper
   def self.get_items_xml_str(items)
 		str = ''
     items.each do |item|
-      str +=  "<item #{item[:arg] ? "arg=#{'"' + item[:arg] + '"'}" : ''}>" +
+      str +=  "<item #{item[:autocomplete] ? "autocomplete=#{'"' + item[:autocomplete] + '"'}" : ''} #{item[:arg] ? "arg=#{'"' + item[:arg] + '"'}" : ''}>" +
               "#{item[:icon] ? "<icon>#{item[:icon]}</icon>" : ''} " +
-							"<title>#{item[:title]}</title>" + 
-							"<subtitle>#{item[:subtitle]}</subtitle>" +
+              "<title>#{item[:title]}</title>" + 
+              "<subtitle>#{item[:subtitle]}</subtitle>" +
 							"</item>"
 		end
 		return str

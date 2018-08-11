@@ -2,18 +2,21 @@ require 'json'
 require_relative '../utils/output'
 
 class ColorFilter
-	DEFAULT_KEY = '#000'
 	class << self
 		def do_filter(key)
-  	  colorMappingJsonString = File.read "./assets/colorNameMapping.json"
+  	  colorMappingJsonString = File.read "./assets/color_name_mapping.json"
   		colorMapping = JSON.parse(colorMappingJsonString)
 
       if key && key != ''
-        result = get_items(key, colorMapping)
-        Output.put(result[:items])
+        items = get_items(key, colorMapping)
+        Output.put(items)
       else
         items = []
-        colorMapping.each {|k, v| items << {:title => "#{k} : #{v}"}}
+        colorMapping.each {|k, v| items << {
+          :title => "#{k} : #{v}",
+          :autocomplete => k
+          }
+        }
         Output.put(items)
       end
 		end
@@ -39,17 +42,16 @@ class ColorFilter
       # Hash.from_libxml may return hash key mixed with symbol and string.
       items = whole_xml['items'] || whole_xml[:items]
       item = items['item'] || items[:item]
-      # p item[0]
-      # p item
       item.unshift({
         title: colorValue,
         subtitle: "#{key}: use ENTER or CMD+C to paste",
-        arg: colorValue
+        arg: colorValue,
+        # icon: item[0][:icon]
       })
-
-      return {
-        items: item
-      }
+      return item
+      # return {
+      #   items: item
+      # }
     end
 
     def get_items(key, colorMapping)
@@ -71,22 +73,20 @@ class ColorFilter
           items << {
             :title => colorMapping[colorMappingKey],
             :subtitle => "#{colorMappingKey}: use ENTER or CMD+C to paste",
-            :arg => colorMapping[colorMappingKey]
+            :arg => colorMapping[colorMappingKey],
+            :autocomplete => colorMappingKey,
           }
         end
       end
 
       if items.size > 0
-        return {
-          items: items
-        }
         return items
       else 
-        return {
-          items: [{
+        return [
+          {
             :title => 'Invalid key.',
-          }]
-        }    
+          }
+        ]  
       end
 		end
 	end

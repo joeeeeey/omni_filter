@@ -14,7 +14,7 @@ class UrlFilter
   ]
   class << self
     def do_filter(key, args)
-      urlMappingJsonString = File.read "./assets/urlMapping.json"
+      urlMappingJsonString = File.read "./assets/url_mapping.json"
       urlMapping = JSON.parse(urlMappingJsonString)
 
       if key && key != ''
@@ -22,11 +22,14 @@ class UrlFilter
         Output.put(items)
       else
         items = []
-        urlMapping.each {|k, v| items << {
-          :title => "#{k.upcase}",
-          :subtitle => URI.join(v, "/").to_s,
-          :arg => v
-          }}
+        urlMapping.each {|k, v| items << 
+          {
+            :title => "#{k.upcase}",
+            :subtitle => URI.join(v, "/").to_s,
+            :arg => v,
+            :autocomplete => k
+          }
+        }
         Output.put(items)
       end
     end
@@ -55,7 +58,8 @@ class UrlFilter
           return {
             :title => matchedKey.upcase,
             :subtitle => "press ENTER to go, or use ', {searchTerm' to search",
-            :arg => urlMapping[matchedKey]
+            :arg => urlMapping[matchedKey],
+            :autocomplete => matchedKey
           }   
         end
       else
@@ -64,7 +68,8 @@ class UrlFilter
           items << {
             :title => "#{matchedKey.upcase}",
             :subtitle => "press ENTER to go",
-            :arg => "#{urlMapping[matchedKey]}"
+            :arg => "#{urlMapping[matchedKey]}",
+            :autocomplete => matchedKey
           }       
         end
         return items

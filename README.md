@@ -3,16 +3,16 @@
 This project is an [alfred](https://www.alfredapp.com/) workflow for daily working filter based on Ruby.
 
 ## Getting started
-### Set Up
+### Installation
 
-Install by repo. 
+By github repo. 
 
 1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
 2. Open termial.
 3. Run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`.
 4. Git clone this repo.
 
-Install by binary file.
+By binary file.
 
 1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
 2. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
@@ -30,22 +30,24 @@ Install by binary file.
 - Colors(Able to preview the real color).
 - Fronts.
 
-![stf.gif](https://upload-images.jianshu.io/upload_images/2674994-6419a000489bd769.gif?imageMogr2/auto-orient/strip)
+Interaction demo of `stf`
 
+![stf.gif](https://upload-images.jianshu.io/upload_images/2674994-6419a000489bd769.gif?imageMogr2/auto-orient/strip)
 
 ### 2. Go to following web links faster.
 - Jira tickets(Cache supported).
 - Microapp web links for dev, stage, uat, prod environment(Search supported).
 - Github repos of Overseas-Student-Living organization.
 
-![jira.gif](https://upload-images.jianshu.io/upload_images/2674994-355245325381fcab.gif?imageMogr2/auto-orient/strip)
+[See the Interaction demo of Jira.](https://upload-images.jianshu.io/upload_images/2674994-355245325381fcab.gif?imageMogr2/auto-orient/strip)
 
-![stt.gif](https://upload-images.jianshu.io/upload_images/2674994-8b1fa2d128c51d39.gif?imageMogr2/auto-orient/strip)
+[See the Interaction demo of stt.](https://upload-images.jianshu.io/upload_images/2674994-8b1fa2d128c51d39.gif?imageMogr2/auto-orient/strip)
 
-![stg.gif](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
-
+[See the Interaction demo of stg.](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
 
 ## Keyword List
+
+The following keywords can be easily changed by alfred.
 
 ## 1. stf
 

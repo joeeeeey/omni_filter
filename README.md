@@ -30,10 +30,19 @@ Install by binary file.
 - Colors(Able to preview the real color).
 - Fronts.
 
+![stf.gif](https://upload-images.jianshu.io/upload_images/2674994-6419a000489bd769.gif?imageMogr2/auto-orient/strip)
+
+
 ### 2. Go to following web links faster.
 - Jira tickets(Cache supported).
 - Microapp web links for dev, stage, uat, prod environment(Search supported).
 - Github repos of Overseas-Student-Living organization.
+
+![jira.gif](https://upload-images.jianshu.io/upload_images/2674994-355245325381fcab.gif?imageMogr2/auto-orient/strip)
+
+![stt.gif](https://upload-images.jianshu.io/upload_images/2674994-8b1fa2d128c51d39.gif?imageMogr2/auto-orient/strip)
+
+![stg.gif](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
 
 
 ## Keyword List
@@ -41,8 +50,6 @@ Install by binary file.
 ## 1. stf
 
 Filter keys which frequently used.
-
-<!-- ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stf.png) -->
 
 ## 2. stc
 
@@ -56,13 +63,10 @@ Filter and navigate to microapp web links.
 
 - 3.1 Search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
 
-<!-- ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt1.png) -->
 
 - 3.2 Use the search api of student.com by search term.
 
 Eg: Type `stt stage,london` in alfred, it will use `london` as the search term.
-
-<!-- ![alt text](https://raw.githubusercontent.com/joeeeeey/alfred_daily_filter/master/assets/images/stt2.png) -->
 
 ## 4. jira/stj
 Filter and navigate to jira by ticket number.

@@ -6,11 +6,12 @@ begin
   require_relative './filters/all_keys_filter'
   require_relative './filters/url_filter'
   require_relative './filters/jira_filter'
+  require_relative './filters/github_filter'
   require_relative './extension/hash'
   require 'fileutils'
 
   # Notice: 英文 ',' 来分隔参数
-  # ARGV   
+  # ARGV
   params = ARGV[0]
   polishedParams = params.gsub('，', ',')
 
@@ -27,13 +28,13 @@ begin
   when 'allkeys' then AllKeysFilter.do_filter(key)
   when 'stt' then UrlFilter.do_filter(key, argParams)
   when 'stji', 'jira' then JiraFilter.do_filter(key)
+  when 'stgh' then GithubFilter.do_filter(key)
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 
     }
     Output.put(item)
   end
-
 rescue Exception => e
   item = {
     :title => 'SOME ERROR HAPPENED.', 

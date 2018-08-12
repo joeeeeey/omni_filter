@@ -1,4 +1,3 @@
-require 'json'
 require_relative '../utils/output'
 
 class AllKeysFilter
@@ -50,7 +49,7 @@ class AllKeysFilter
           items << {
             :title => "#{x}: #{allKeysMapping[x]}",
             :subtitle => "use ENTER or CMD+C to paste",
-            :arg => "#{x}: #{allKeysMapping[x]}",
+            :arg => "#{x}",
             :autocomplete => x
           }
         end

@@ -12,3 +12,6 @@ test_jira:
 
 test_stf:
 	/usr/bin/ruby main.rb "allkeys"
+
+test_stgh:
+	/usr/bin/ruby main.rb "stgh,search"

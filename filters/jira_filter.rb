@@ -1,4 +1,3 @@
-require 'json'
 require_relative '../utils/output'
 
 class JiraFilter
@@ -24,7 +23,7 @@ class JiraFilter
       cache_data = JSON.parse(file)
 
       # 满足 ticket number 验证并且不在 cache 中则加入该 key
-      if key && key.length == 4 && key.to_i > 3000 && key.to_i < 7500
+      if key && key.length == 4 && key.to_i > 3000 && key.to_i < 8000
         unless cache_data[key]
           cache_data[key] = {created_at: Time.now}
           File.open(file_name,"w") do |f|

@@ -1,6 +1,4 @@
 # This wapper is used to convert hash data to alfred xml format data.
-require 'json'
-
 class WorkflowXmlWrapper
 	def self.wrap(items=[])
     items = [items] if items.is_a? Hash

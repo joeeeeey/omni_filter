@@ -5,19 +5,17 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 ## Getting started
 ### Installation
 
-By github repo. 
+- By github repo. 
+  - Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+  - Open termial.
+  - Run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`.
+  - Git clone this repo.(Pull for update)
 
-1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
-2. Open termial.
-3. Run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`.
-4. Git clone this repo.(Pull for update)
-
-By binary file.
-
-1. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
-2. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
-3. Double click `WorkingFilter.alfredworkflow` to install this workflow.
-(Reinstall for update)
+- By binary file.
+  -. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+  -. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
+  -. Double click `WorkingFilter.alfredworkflow` to install this workflow.
+  (Reinstall for update)
 
 ~~May need install dependency of ruby gems.~~
 - ~~Open termial~~
@@ -62,17 +60,17 @@ Filter color keys frequently used, which is a subset of `stf`.
 
 Filter and navigate to microapp web links.
 
-### How to search
+### Params in `stt`
 
-- 3.1 Search the website by `env`(dev, uat, stage, prod) and `area`(www) keyword.Specifically, for dev env, keyword `page name`(hp,srp, pp, sp) is optional.
+Differnt from other filters, `stt` accecpt two params seqerated by ','.
 
-- 3.2 Use the search api of student.com by search term.
+Format: `stt ${env-area},${searchTerm}`
 
 Eg: Type `stt stage,london` in alfred, it will use `london` as the search term.
 
 ## 4. jira/stj
 Filter and navigate to jira by ticket number.
-It will remember the search history of 'valid' ticket number.
+Will remember the search history of 'valid' ticket number.
 
 ## 5. stgh
 Filter and navigate to github by repo name.

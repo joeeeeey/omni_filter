@@ -12,9 +12,9 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
   - Git clone this repo.(Pull for update)
 
 - By binary file.
-  -. Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
-  -. [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
-  -. Double click `WorkingFilter.alfredworkflow` to install this workflow.
+  - Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+  - [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
+  - Double click `WorkingFilter.alfredworkflow` to install this workflow.
   (Reinstall for update)
 
 ~~May need install dependency of ruby gems.~~
@@ -29,20 +29,18 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 - Colors(Able to preview the real color).
 - Fronts.
 
-Interaction demo of `stf`
-
-[View Interaction demo of `stf`.](https://upload-images.jianshu.io/upload_images/2674994-6419a000489bd769.gif?imageMogr2/auto-orient/strip)
+[View Interaction of `stf`.](https://upload-images.jianshu.io/upload_images/2674994-6419a000489bd769.gif?imageMogr2/auto-orient/strip)
 
 ### 2. Go to following web links faster.
 - Jira tickets(Cache supported).
 - Microapp web links for dev, stage, uat, prod environment(Search supported).
 - Github repos of Overseas-Student-Living organization.
 
-[View Interaction demo of `Jira`.](https://upload-images.jianshu.io/upload_images/2674994-355245325381fcab.gif?imageMogr2/auto-orient/strip)
+[View Interaction of `Jira`.](https://upload-images.jianshu.io/upload_images/2674994-355245325381fcab.gif?imageMogr2/auto-orient/strip)
 
-[View Interaction demo of `stt`.](https://upload-images.jianshu.io/upload_images/2674994-8b1fa2d128c51d39.gif?imageMogr2/auto-orient/strip)
+[View Interaction of `stt`.](https://upload-images.jianshu.io/upload_images/2674994-8b1fa2d128c51d39.gif?imageMogr2/auto-orient/strip)
 
-[View Interaction demo of `stg`.](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
+[View Interaction of `stg`.](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
 
 ## Keyword List
 

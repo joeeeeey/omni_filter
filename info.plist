@@ -8,33 +8,7 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>jira</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>jira</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -99,6 +73,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>jira</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Joey</string>
@@ -107,7 +94,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>WorkingFilter</string>
+	<string>OmniFilter</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -115,6 +102,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -175,6 +166,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -218,6 +213,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -280,49 +279,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>126</integer>
-				<key>keyword</key>
-				<string>jira</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
+				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>搜索{query}中…</string>
-				<key>script</key>
-				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
-				<key>scriptargtype</key>
+				<key>argumenttrimmode</key>
 				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Go to Jira</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>jira</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -366,6 +326,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -409,6 +373,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -466,26 +434,12 @@
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
-		<key>jira</key>
-		<dict>
-			<key>xpos</key>
-			<integer>150</integer>
-			<key>ypos</key>
-			<integer>370</integer>
-		</dict>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>150</integer>
 			<key>ypos</key>
 			<integer>260</integer>
-		</dict>
-		<key>jira</key>
-		<dict>
-			<key>xpos</key>
-			<integer>150</integer>
-			<key>ypos</key>
-			<integer>480</integer>
 		</dict>
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<dict>
@@ -514,6 +468,13 @@
 			<integer>140</integer>
 			<key>ypos</key>
 			<integer>10</integer>
+		</dict>
+		<key>jira</key>
+		<dict>
+			<key>xpos</key>
+			<integer>150</integer>
+			<key>ypos</key>
+			<integer>480</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

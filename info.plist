@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>stj</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<array>
 			<dict>
@@ -335,6 +348,53 @@
 				<key>escaping</key>
 				<integer>126</integer>
 				<key>keyword</key>
+				<string>stj</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Go to Jira</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>stj</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
 				<string>stg</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
@@ -441,12 +501,19 @@
 			<key>ypos</key>
 			<integer>260</integer>
 		</dict>
+		<key>stj</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>500</integer>
+		</dict>
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>230</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>620</integer>
 		</dict>
 		<key>DAAA78B9-EF63-40EC-B8FB-18FBB7C155D3</key>
 		<dict>

@@ -8,7 +8,7 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
+		<key>jira</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -34,7 +34,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</key>
+		<key>jira</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -314,7 +314,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>7B811C86-6974-4F19-A2C0-E339714298EA</string>
+			<string>jira</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -357,7 +357,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</string>
+			<string>jira</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -466,7 +466,7 @@
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
-		<key>7B811C86-6974-4F19-A2C0-E339714298EA</key>
+		<key>jira</key>
 		<dict>
 			<key>xpos</key>
 			<integer>150</integer>
@@ -480,7 +480,7 @@
 			<key>ypos</key>
 			<integer>260</integer>
 		</dict>
-		<key>946B2456-671E-40D4-9BBD-B5BC7EA81CC9</key>
+		<key>jira</key>
 		<dict>
 			<key>xpos</key>
 			<integer>150</integer>

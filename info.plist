@@ -8,6 +8,19 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>jira</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<array>
 			<dict>
@@ -335,7 +348,7 @@
 				<key>escaping</key>
 				<integer>126</integer>
 				<key>keyword</key>
-				<string>stgh</string>
+				<string>jira</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -347,7 +360,7 @@
 				<key>runningsubtext</key>
 				<string>搜索{query}中…</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "stgh,{query}"; </string>
+				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -355,7 +368,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Go to github Overseas-Student-Living...</string>
+				<string>Go to Jira</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -364,7 +377,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>DAAA78B9-EF63-40EC-B8FB-18FBB7C155D3</string>
+			<string>jira</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -415,11 +428,65 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>stgh</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "stgh,{query}"; </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Go to github Overseas-Student-Living...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>DAAA78B9-EF63-40EC-B8FB-18FBB7C155D3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Updated by Andreas Stokholm to be able to handle multiple local IP-addresses.</string>
 	<key>uidata</key>
 	<dict>
+		<key>jira</key>
+		<dict>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
 		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
 		<dict>
 			<key>xpos</key>
@@ -444,16 +511,16 @@
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>600</integer>
 		</dict>
 		<key>DAAA78B9-EF63-40EC-B8FB-18FBB7C155D3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>370</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>650</integer>
 		</dict>
 		<key>color_filter</key>
 		<dict>
@@ -474,7 +541,7 @@
 			<key>xpos</key>
 			<integer>150</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>380</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

@@ -6,13 +6,13 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 ### Installation
 
 - By github repo. 
-  - Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+  - [Download and install](https://github.com/joeeeeey/recources/blob/master/assets/Alfred%2B3.3.dmg.zip) alfred, make sure you can use powerpack for workflow.
   - Open termial.
   - Run `cd ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/`.
   - Git clone this repo.(Pull for update)
 
 - By binary file.
-  - Download and install [alfred](https://www.alfredapp.com/), make sure you can use powerpack for workflow.
+  - [Download and install](https://github.com/joeeeeey/recources/blob/master/assets/Alfred%2B3.3.dmg.zip) alfred, make sure you can use powerpack for workflow.
   - [Download lastest realase.](https://github.com/joeeeeey/alfred_daily_filter/releases)
   - Double click `WorkingFilter.alfredworkflow` to install this workflow.
   (Reinstall for update)

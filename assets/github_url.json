@@ -1,12 +1,16 @@
 {
+  "hp": "microapp-home-page",
+  "pp": "microapp-property-page",
+  "pp-v2": "microapp-property-page-v2",
+  "srp": "microapp-search-results-page",
+  "srp-v2": "microapp-search-results-page-v2",
   "microapp-home-page": "microapp-home-page",
-  "microapp-property-page": "microapp-property-page",
-  "microapp-property-page-v2": "microapp-property-page-v2",
-  "microapp-search-results-page": "microapp-search-results-page",
   "microapp-student-portal": "microapp-student-portal",
   "microapp-partner-portal": "microapp-partner-portal",
   "microapp-partner-portal-v2": "microapp-partner-portal-v2",
   "student-portal": "student-portal",
   "microapp-frontend-base": "microapp-frontend-base",
-  "microapp-common-packages": "microapp-common-packages"
+  "microapp-common-packages": "microapp-common-packages",
+  "storm-l10n": "storm-l10n",
+  "microapp-api": "microapp-api"
 }

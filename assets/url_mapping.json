@@ -3,7 +3,8 @@
   "stage-www": "https://hurricane-www.dandythrust.com/",
   "prod": "https://cn.student.com/",
   "uat": "https://uat1-cn.dandythrust.com/",
-  "uat-www": "https://uat1-www.dandythrust.com/",  
+  "uat-www": "https://uat1-www.dandythrust.com/", 
+  "dev-srp-v2": "http://127.0.0.1:3001/uk/london", 
   "dev-srp": "http://127.0.0.1:8202/uk/liverpool",
   "dev-srp-www": "http://127.0.0.1:8201/ja-jp/uk/london",
   "dev-pp": "http://127.0.0.1:8302/uk/london/p/pure-city",
@@ -14,4 +15,4 @@
   "dev-student-portal": "http://127.0.0.1:8602/my-account/dashboard",
   "dev-student-portal-www": "http://127.0.0.1:8601/my-account/dashboard",
   "dev-hp": "http://127.0.0.1:8102/"
-}
+} 

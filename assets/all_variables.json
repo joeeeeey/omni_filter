@@ -110,5 +110,19 @@
   "'Avenir Next W04', 'Avenir Next', Helvetica, Arial, sans-serif":"font-avenir-next",
   "Helvetica, Arial, sans-serif":"font-system",
   "Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Microsoft JhengHei, sans-serif":"font-cn",
-  "Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif":"font-cn-traditional"
+  "Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif":"font-cn-traditional",
+  "z-negative": -1,
+  "z-base": 1,
+  "z-low": 10,
+  "z-mid": 50,
+  "z-big": 100,
+  "z-high": 1000,
+  "z-on-top": 5000,
+  "z-top-swap": 10000,
+  "z-dropdown": 50000,
+  "z-header": 100000,
+  "z-overlay": 1000000,
+  "z-modal": 10000000,
+  "z-above-modal": 50000000,
+  "z-king": 100000000
 }

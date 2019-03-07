@@ -7,6 +7,7 @@ begin
   require_relative './filters/url_filter'
   require_relative './filters/jira_filter'
   require_relative './filters/github_filter'
+  require_relative './filters/vscode_filter'
   require_relative './extension/hash'
   require 'fileutils'
 
@@ -29,6 +30,7 @@ begin
   when 'stt' then UrlFilter.do_filter(key, argParams)
   when 'stji', 'jira' then JiraFilter.do_filter(key)
   when 'stgh' then GithubFilter.do_filter(key)
+  when 'code' then VscodeFilter.do_filter(key)
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 

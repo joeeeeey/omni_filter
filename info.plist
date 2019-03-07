@@ -8,11 +8,11 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
+		<key>2FF12C66-513B-4502-BE18-8106A9169525</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<string>BB9492CD-5860-462C-8DD7-027B4E266118</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,7 +21,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>stj</key>
+		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -60,6 +60,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DC9D709A-675E-4C3D-BB7A-0258A4180B89</key>
+		<array/>
 		<key>color_filter</key>
 		<array>
 			<dict>
@@ -99,6 +101,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>stj</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Joey</string>
@@ -115,10 +130,6 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -177,12 +188,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query={query}
+
+/usr/local/bin/code $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>/usr/local/bin/code {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BB9492CD-5860-462C-8DD7-027B4E266118</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -226,10 +258,6 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -290,12 +318,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="/asdas/dwww/{query}"
+
+echo $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DC9D709A-675E-4C3D-BB7A-0258A4180B89</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -339,10 +388,6 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -386,10 +431,49 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>code</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
 				<integer>0</integer>
-				<key>argumenttrimmode</key>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "code,{query}";</string>
+				<key>scriptargtype</key>
 				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>open in vscode...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2FF12C66-513B-4502-BE18-8106A9169525</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -433,10 +517,6 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -480,6 +560,13 @@
 	<string>Updated by Andreas Stokholm to be able to handle multiple local IP-addresses.</string>
 	<key>uidata</key>
 	<dict>
+		<key>2FF12C66-513B-4502-BE18-8106A9169525</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>560</integer>
+		</dict>
 		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
 		<dict>
 			<key>xpos</key>
@@ -501,12 +588,12 @@
 			<key>ypos</key>
 			<integer>260</integer>
 		</dict>
-		<key>stj</key>
+		<key>BB9492CD-5860-462C-8DD7-027B4E266118</key>
 		<dict>
 			<key>xpos</key>
-			<integer>160</integer>
+			<integer>730</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>80</integer>
 		</dict>
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<dict>
@@ -521,6 +608,13 @@
 			<integer>370</integer>
 			<key>ypos</key>
 			<integer>650</integer>
+		</dict>
+		<key>DC9D709A-675E-4C3D-BB7A-0258A4180B89</key>
+		<dict>
+			<key>xpos</key>
+			<integer>880</integer>
+			<key>ypos</key>
+			<integer>370</integer>
 		</dict>
 		<key>color_filter</key>
 		<dict>
@@ -542,6 +636,13 @@
 			<integer>150</integer>
 			<key>ypos</key>
 			<integer>380</integer>
+		</dict>
+		<key>stj</key>
+		<dict>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>500</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

@@ -1,5 +1,5 @@
 test_stt:
-	/usr/bin/ruby main.rb "stt,prod,bd"
+	/usr/bin/ruby main.rb "stt,stage"
 
 test_sttc:
 	/usr/bin/ruby main.rb "stt,prod,伦敦"	
@@ -13,5 +13,8 @@ test_jira:
 test_stf:
 	/usr/bin/ruby main.rb "allkeys"
 
-test_stgh:
-	/usr/bin/ruby main.rb "stgh,search"
+test_stg:
+	/usr/bin/ruby main.rb "stg,search"
+
+test_code:
+	/usr/bin/ruby main.rb "code,/Users/joeeey/WechatIMG90.tiff"

@@ -17,4 +17,4 @@ test_stg:
 	/usr/bin/ruby main.rb "stg,search"
 
 test_code:
-	/usr/bin/ruby main.rb "code,/Users/joeeey/Applications"
+	/usr/bin/ruby main.rb "code,r"

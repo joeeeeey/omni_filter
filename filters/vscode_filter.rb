@@ -18,8 +18,9 @@ class VscodeFilter
       # automplete 带有 xxx/, do filter 中发现 / 结尾发触发 Dir.entries
       # 否则只做过滤
       if key && key != ''
-        if !key.downcase.include?(Dir.home.downcase) && 
-           !Dir.home.downcase.include?(key.downcase) &&
+        # 若不满足一下三种情况，将用户输入的 key 增加 `Dir.home` 的前缀
+        if !key.downcase.include?(Dir.home.downcase) &&
+           !(key[0] == '/' && Dir.home.downcase.include?(key.downcase)) &&
            key[0] != '/'
           key = "#{Dir.home}/#{key}"
         end

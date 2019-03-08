@@ -42,6 +42,8 @@ This project is an [alfred](https://www.alfredapp.com/) workflow for daily worki
 
 [View Interaction of `stg`.](https://upload-images.jianshu.io/upload_images/2674994-92abaeab7a06ea6e.gif?imageMogr2/auto-orient/strip)
 
+[View Interaction of `code`.](https://upload-images.jianshu.io/upload_images/2674994-6a865c2ecd895ba5.gif?imageMogr2/auto-orient/strip)
+
 ## Keyword List
 
 The following keywords can be easily changed by alfred.
@@ -72,6 +74,12 @@ Will remember the search history of 'valid' ticket number.
 
 ## 5. stgh
 Filter and navigate to github by repo name.
+
+## 6. code
+
+Prerequisite: [Install vscode and the shell command.](https://code.visualstudio.com/docs/setup/mac)
+
+Fast open vscode by file path.
 
 ## Debug
 1. go to the repo directory in termial.

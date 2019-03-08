@@ -20,6 +20,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>87A559E4-1751-4378-A99E-5F40F391FC8A</key>
 		<array>
@@ -193,9 +203,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query={query}
+				<string>query='{query}'
 
-/usr/local/bin/code $query</string>
+/usr/local/bin/code "$query"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -250,6 +260,29 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>color_filter</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DC9D709A-675E-4C3D-BB7A-0258A4180B89</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -318,31 +351,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query="/asdas/dwww/{query}"
-
-echo $query</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DC9D709A-675E-4C3D-BB7A-0258A4180B89</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -382,6 +390,25 @@ echo $query</string>
 			<string>jira</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -563,7 +590,7 @@ echo $query</string>
 		<key>2FF12C66-513B-4502-BE18-8106A9169525</key>
 		<dict>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>580</integer>
 			<key>ypos</key>
 			<integer>560</integer>
 		</dict>
@@ -612,9 +639,16 @@ echo $query</string>
 		<key>DC9D709A-675E-4C3D-BB7A-0258A4180B89</key>
 		<dict>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>180</integer>
+		</dict>
+		<key>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</key>
+		<dict>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>380</integer>
 		</dict>
 		<key>color_filter</key>
 		<dict>

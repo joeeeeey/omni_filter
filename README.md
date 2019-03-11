@@ -75,6 +75,10 @@ Will remember the search history of 'valid' ticket number.
 ## 5. stgh
 Filter and navigate to github by repo name.
 
+How to set default path of `code`|`subl`|`idea`: 
+
+todo: modify config
+
 ## 6. code
 
 Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)

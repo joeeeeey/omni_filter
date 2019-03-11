@@ -21,3 +21,6 @@ test_code:
 
 test_subl:
 	/usr/bin/ruby main.rb "subl,r"
+
+test_idea:
+	/usr/bin/ruby main.rb "idea,r"

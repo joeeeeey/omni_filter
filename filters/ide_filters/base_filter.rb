@@ -2,38 +2,57 @@ require_relative '../../utils/output'
 
 class IdeFilter
   class << self
-    def cli_is_exist?
-      return File.exist? '/usr/local/bin/code'
+    # def cli_is_exist?
+    #   return File.exist? '/usr/local/bin/code'
+    # end
+
+    def app_is_not_installed?
+      Dir.glob('/Applications/Visual Studio Code.app').empty?
     end
 
     def get_cli_missing_output
       return {
-        :title => "Can't find the `code` cli for vscode.",
+        :title => "Can't find `Visual Studio Code` in application.",
         :subtitle => "press SHIFT+ENTER go to offical install doc.",
         :arg => "https://code.visualstudio.com/docs/setup/mac",
         :autocomplete => "https://code.visualstudio.com/docs/setup/mac"
       }
     end
 
+    def default_path
+      if Dir.exist? "#{Dir.home}/repos"
+        return "#{Dir.home}/repos"
+      end
+
+      if Dir.exist? "#{Dir.home}/projects"
+        return "#{Dir.home}/projects"
+      end
+
+      if Dir.exist? "#{Dir.home}/student"
+        return "#{Dir.home}/student"
+      end
+      return Dir.home
+    end
+
     def do_filter(key)
       # Check `code` cli
-      if !cli_is_exist?()
-        Output.put(get_cli_missing_output())
+      if app_is_not_installed?
+        Output.put(get_cli_missing_output)
         return
       end
 
       # do filter 中发现 / 结尾发触发 Dir.entries
       # 否则只做过滤
       if key && key != ''
-        # 若不满足以下三种情况，将用户输入的 key 增加 `Dir.home` 的前缀
-        if !key.downcase.include?(Dir.home.downcase) &&
-           !(key[0] == '/' && Dir.home.downcase.include?(key.downcase)) &&
+        # 若不满足以下三种情况，将用户输入的 key 增加 `default_path` 的前缀
+        if !key.downcase.include?(default_path.downcase) &&
+           !(key[0] == '/' && default_path.downcase.include?(key.downcase)) &&
            key[0] != '/'
-          key = "#{Dir.home}/#{key}"
+          key = "#{default_path}/#{key}"
         end
       else
         # If key not exist, use `~` path defaultly
-        key = "#{Dir.home}/"
+        key = "#{default_path}/"
       end
       if key[-1] == '/'
         entry_path = key

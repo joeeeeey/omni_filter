@@ -81,11 +81,15 @@ Prerequisite: [Install vscode and the shell command.](https://code.visualstudio.
 
 Fast open vscode by file path.
 
+## 7. subl
+
+Prerequisite: [Install sublime and sublime cli.](http://docs.sublimetext.info/en/latest/command_line/command_line.html)
+
 ## Debug
 1. go to the repo directory in termial.
 2. run `make test_stt`.
 
-## [Alfred xml format](https://github.com/joeeeeey/alfred_daily_filter/wiki)
+## ~~[Alfred xml format](https://github.com/joeeeeey/alfred_daily_filter/wiki)~~ [Deprecated by json](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)
 
 ## TODO:
 

@@ -77,13 +77,21 @@ Filter and navigate to github by repo name.
 
 ## 6. code
 
-Prerequisite: [Install vscode and the shell command.](https://code.visualstudio.com/docs/setup/mac)
+Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)
 
 Fast open vscode by file path.
 
 ## 7. subl
 
-Prerequisite: [Install sublime and sublime cli.](http://docs.sublimetext.info/en/latest/command_line/command_line.html)
+Prerequisite: [Install sublime](http://docs.sublimetext.info/en/latest/command_line/command_line.html)
+
+Fast open sublime text by file path.
+
+## 8. idea
+
+Prerequisite: Install IDEA
+
+Fast open IntelliJ IDEA by file path.
 
 ## Debug
 1. go to the repo directory in termial.

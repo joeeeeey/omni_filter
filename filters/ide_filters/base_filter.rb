@@ -1,24 +1,31 @@
-require_relative '../utils/output'
+require_relative '../../utils/output'
 
-class VscodeFilter
-  INVALID_PATH_CONTENT = { :title => "Can't find the file or directory with current path of" }
+class IdeFilter
   class << self
+    def cli_is_exist?
+      return File.exist? '/usr/local/bin/code'
+    end
+
+    def get_cli_missing_output
+      return {
+        :title => "Can't find the `code` cli for vscode.",
+        :subtitle => "press SHIFT+ENTER go to offical install doc.",
+        :arg => "https://code.visualstudio.com/docs/setup/mac",
+        :autocomplete => "https://code.visualstudio.com/docs/setup/mac"
+      }
+    end
+
     def do_filter(key)
       # Check `code` cli
-      if !File.exist? '/usr/local/bin/code'
-        Output.put({
-          :title => "Can't find the `code` cli for vscode.",
-          :subtitle => "press SHIFT+ENTER go to offical install doc.",
-          :arg => "https://code.visualstudio.com/docs/setup/mac",
-          :autocomplete => "https://code.visualstudio.com/docs/setup/mac"
-        })
+      if !cli_is_exist?()
+        Output.put(get_cli_missing_output())
         return
       end
 
-      # automplete 带有 xxx/, do filter 中发现 / 结尾发触发 Dir.entries
+      # do filter 中发现 / 结尾发触发 Dir.entries
       # 否则只做过滤
       if key && key != ''
-        # 若不满足一下三种情况，将用户输入的 key 增加 `Dir.home` 的前缀
+        # 若不满足以下三种情况，将用户输入的 key 增加 `Dir.home` 的前缀
         if !key.downcase.include?(Dir.home.downcase) &&
            !(key[0] == '/' && Dir.home.downcase.include?(key.downcase)) &&
            key[0] != '/'

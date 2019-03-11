@@ -18,3 +18,6 @@ test_stg:
 
 test_code:
 	/usr/bin/ruby main.rb "code,r"
+
+test_subl:
+	/usr/bin/ruby main.rb "subl,r"

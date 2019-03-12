@@ -1,11 +1,8 @@
 require_relative '../../utils/output'
 
-class IdeFilter
+class IdeBaseFilter
+  CONFIG_PATH = '/usr/local/etc/omini_config.json'
   class << self
-    # def cli_is_exist?
-    #   return File.exist? '/usr/local/bin/code'
-    # end
-
     def app_is_not_installed?
       Dir.glob('/Applications/Visual Studio Code.app').empty?
     end
@@ -20,6 +17,16 @@ class IdeFilter
     end
 
     def default_path
+      if File.exist? CONFIG_PATH
+        config = JSON.parse(File.read(CONFIG_PATH))
+        ide_default_path = config["ide_default_path"]
+
+        ide_default_path.gsub!('~', "#{Dir.home}")
+
+        return ide_default_path
+      end
+
+      # TODO remove the following hard code.
       if Dir.exist? "#{Dir.home}/repos"
         return "#{Dir.home}/repos"
       end

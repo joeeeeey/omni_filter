@@ -1,4 +1,4 @@
-require_relative './base_filter'
+require_relative './ide_base_filter'
 
-class VscodeFilter < IdeFilter
+class VscodeFilter < IdeBaseFilter
 end

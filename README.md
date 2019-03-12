@@ -77,7 +77,13 @@ Filter and navigate to github by repo name.
 
 How to set default path of `code`|`subl`|`idea`: 
 
-todo: modify config
+How to set default file path of `code`, `subl`, `idea`
+
+```bash
+cat >> /usr/local/etc/omini_config.json <<EOF
+{ "ide_default_path": "~" }
+EOF
+```
 
 ## 6. code
 

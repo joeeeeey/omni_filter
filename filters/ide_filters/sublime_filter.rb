@@ -1,11 +1,7 @@
-require_relative './base_filter'
+require_relative './ide_base_filter'
 
-class SublimeFilter < IdeFilter
+class SublimeFilter < IdeBaseFilter
   class << self
-    # def cli_is_exist?
-    #   return File.exist? '/usr/local/bin/subl'
-    # end
-
     def app_is_not_installed?
       Dir.glob('/Applications/Sublime Text*.app*').empty?
     end

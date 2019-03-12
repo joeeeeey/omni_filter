@@ -38,20 +38,15 @@ class ColorFilter
       colorValue = colorMapping[key]
       value = `cd color && ./colors 'rgb #{hex2rgb(key)}'`
       whole_xml = Hash.from_libxml(value)
-
-      # Hash.from_libxml may return hash key mixed with symbol and string.
       items = whole_xml['items'] || whole_xml[:items]
       item = items['item'] || items[:item]
+      item.each {|x| x[:icon] = { :path => x[:icon] } }
       item.unshift({
         title: colorValue,
         subtitle: "#{key}: use ENTER or CMD+C to paste",
         arg: colorValue,
-        # icon: item[0][:icon]
       })
       return item
-      # return {
-      #   items: item
-      # }
     end
 
     def get_items(key, colorMapping)

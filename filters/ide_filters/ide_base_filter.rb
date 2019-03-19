@@ -18,26 +18,19 @@ class IdeBaseFilter
 
     def default_path
       if File.exist? CONFIG_PATH
-        config = JSON.parse(File.read(CONFIG_PATH))
-        ide_default_path = config["ide_default_path"]
-
-        ide_default_path.gsub!('~', "#{Dir.home}")
-
-        return ide_default_path
+        begin
+          config = JSON.parse(File.read(CONFIG_PATH))
+          ide_default_path = config["ide_default_path"]
+  
+          ide_default_path.gsub!('~', "#{Dir.home}")
+  
+          return ide_default_path
+        rescue => exception
+          Output.put(get_invalid_path_msg('the path in config'))
+          return
+        end
       end
 
-      # TODO remove the following hard code.
-      if Dir.exist? "#{Dir.home}/repos"
-        return "#{Dir.home}/repos"
-      end
-
-      if Dir.exist? "#{Dir.home}/projects"
-        return "#{Dir.home}/projects"
-      end
-
-      if Dir.exist? "#{Dir.home}/student"
-        return "#{Dir.home}/student"
-      end
       return Dir.home
     end
 

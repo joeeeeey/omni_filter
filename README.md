@@ -75,21 +75,19 @@ Will remember the search history of 'valid' ticket number.
 ## 5. stgh
 Filter and navigate to github by repo name.
 
-How to set default path of `code`|`subl`|`idea`: 
+## 6. code | subl | idea
 
-How to set default file path of `code`, `subl`, `idea`
+Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)
+
+Fast open vscode by file path.
+
+How to set default path of `code`|`subl`|`idea`: 
 
 ```bash
 cat >> /usr/local/etc/omini_config.json <<EOF
 { "ide_default_path": "~" }
 EOF
 ```
-
-## 6. code
-
-Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)
-
-Fast open vscode by file path.
 
 ## 7. subl
 

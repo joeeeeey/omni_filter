@@ -75,13 +75,9 @@ Will remember the search history of 'valid' ticket number.
 ## 5. stgh
 Filter and navigate to github by repo name.
 
-## 6. code | subl | idea
+## 6. code | subl | idea | pcm
 
-Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)
-
-Fast open vscode by file path.
-
-How to set default path of `code`|`subl`|`idea`: 
+How to set default path of `code`|`subl`|`idea`|`pcm` : 
 
 ```bash
 cat >> /usr/local/etc/omini_config.json <<EOF
@@ -89,17 +85,29 @@ cat >> /usr/local/etc/omini_config.json <<EOF
 EOF
 ```
 
-## 7. subl
+- vscode 
+Prerequisite: [Install vscode code](https://code.visualstudio.com/docs/setup/mac)
+
+Fast open vscode by file path.
+
+- subl
 
 Prerequisite: [Install sublime](http://docs.sublimetext.info/en/latest/command_line/command_line.html)
 
 Fast open sublime text by file path.
 
-## 8. idea
+- idea
 
 Prerequisite: Install IDEA
 
 Fast open IntelliJ IDEA by file path.
+
+- pcm
+
+Prerequisite: Install PyCharm
+
+Fast open PyCharm by file path.
+
 
 ## Debug
 1. go to the repo directory in termial.

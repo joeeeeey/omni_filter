@@ -24,3 +24,6 @@ test_subl:
 
 test_idea:
 	/usr/bin/ruby main.rb "idea,r"
+
+test_pycharm:
+	/usr/bin/ruby main.rb "pcm,r";

@@ -11,6 +11,7 @@ begin
   require_relative './filters/ide_filters/vscode_filter'
   require_relative './filters/ide_filters/sublime_filter'
   require_relative './filters/ide_filters/idea_filter'
+  require_relative './filters/ide_filters/pycharm_filter'
   require_relative './extension/hash'
   require 'fileutils'
 
@@ -36,6 +37,7 @@ begin
   when 'code' then VscodeFilter.do_filter(key)
   when 'subl' then SublimeFilter.do_filter(key)
   when 'idea' then IdeaFilter.do_filter(key)
+  when 'pcm' then PycharmFilter.do_filter(key)
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 

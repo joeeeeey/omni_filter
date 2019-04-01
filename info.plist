@@ -8,6 +8,29 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>00092187-007C-47C1-99C6-6C2568AD3E48</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>085EAF52-7D33-4DF6-92C5-6706DF0543BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2FF12C66-513B-4502-BE18-8106A9169525</key>
 		<array>
 			<dict>
@@ -315,6 +338,49 @@ open -a "`ls -dt /Applications/Visual\ Studio\ Code.app*|head -1`" "$query"</str
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>idea</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "idea,{query}";</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>open in idea...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>460C290D-AB03-4294-995A-1148189C4D4B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
 				<integer>126</integer>
 				<key>keyword</key>
 				<string>stt</string>
@@ -353,6 +419,25 @@ open -a "`ls -dt /Applications/Visual\ Studio\ Code.app*|head -1`" "$query"</str
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -374,44 +459,6 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<string>4A88E530-95D3-454C-BF22-A277191269C8</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -464,49 +511,6 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>126</integer>
-				<key>keyword</key>
-				<string>stj</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>搜索{query}中…</string>
-				<key>script</key>
-				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Go to Jira</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>stj</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
 				<string>code</string>
@@ -545,14 +549,33 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>126</integer>
 				<key>keyword</key>
-				<string>idea</string>
+				<string>stj</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -564,7 +587,7 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 				<key>runningsubtext</key>
 				<string>搜索{query}中…</string>
 				<key>script</key>
-				<string>/usr/bin/ruby main.rb "idea,{query}";</string>
+				<string>/usr/bin/ruby main.rb "jira,{query}"; </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -572,7 +595,7 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>open in idea...</string>
+				<string>Go to Jira</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -581,7 +604,75 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>460C290D-AB03-4294-995A-1148189C4D4B</string>
+			<string>stj</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query='{query}'
+
+open -a "`ls -dt /Applications/PyCharm.app*|head -1`" "$query"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string>/usr/local/bin/code {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>085EAF52-7D33-4DF6-92C5-6706DF0543BE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>subl</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "subl,{query}";</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>open in sublime...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>95132ABC-8907-4D39-B228-4D9EF25A6AF8</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -674,49 +765,6 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>subl</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>搜索{query}中…</string>
-				<key>script</key>
-				<string>/usr/bin/ruby main.rb "subl,{query}";</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>open in sublime...</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>95132ABC-8907-4D39-B228-4D9EF25A6AF8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -739,45 +787,102 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>pcm</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string>/usr/bin/ruby main.rb "pcm,{query}";</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>open in pycharm...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>00092187-007C-47C1-99C6-6C2568AD3E48</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Updated by Andreas Stokholm to be able to handle multiple local IP-addresses.</string>
 	<key>uidata</key>
 	<dict>
+		<key>00092187-007C-47C1-99C6-6C2568AD3E48</key>
+		<dict>
+			<key>xpos</key>
+			<integer>960</integer>
+			<key>ypos</key>
+			<integer>740</integer>
+		</dict>
+		<key>085EAF52-7D33-4DF6-92C5-6706DF0543BE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1210</integer>
+			<key>ypos</key>
+			<integer>520</integer>
+		</dict>
 		<key>2FF12C66-513B-4502-BE18-8106A9169525</key>
 		<dict>
 			<key>xpos</key>
-			<integer>560</integer>
+			<integer>590</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>400</integer>
 		</dict>
 		<key>4070677F-9691-4F1C-B4C1-A1ED626281B9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>790</integer>
+			<integer>770</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>690</integer>
 		</dict>
 		<key>460C290D-AB03-4294-995A-1148189C4D4B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>560</integer>
+			<integer>180</integer>
 		</dict>
 		<key>4A88E530-95D3-454C-BF22-A277191269C8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1140</integer>
+			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>360</integer>
 		</dict>
 		<key>57CF52E7-5D07-445D-B912-657419AFFA26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<integer>500</integer>
 			<key>ypos</key>
-			<integer>340</integer>
+			<integer>270</integer>
 		</dict>
 		<key>6125569B-F80C-4518-8375-F06908039270</key>
 		<dict>
@@ -798,14 +903,14 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<key>xpos</key>
 			<integer>590</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>540</integer>
 		</dict>
 		<key>BB9492CD-5860-462C-8DD7-027B4E266118</key>
 		<dict>
 			<key>xpos</key>
-			<integer>730</integer>
+			<integer>740</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>130</integer>
 		</dict>
 		<key>C8EE14FF-A6AA-4932-8E59-C3DE503DF3F3</key>
 		<dict>
@@ -824,9 +929,9 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 		<key>E60D2519-7CAB-4FF3-B7C5-FBAC4005F275</key>
 		<dict>
 			<key>xpos</key>
-			<integer>910</integer>
+			<integer>860</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>430</integer>
 		</dict>
 		<key>color_filter</key>
 		<dict>

@@ -4,7 +4,7 @@ require_relative '../utils/output'
 
 # ENV
 # 1.dev 2.uat 3.stage 4.prod
-class UrlFilter
+class SitesFilter
   CN_API_HOST = 'https://cn.student.com/autocomplete'
   DATA_KEYS = [
     "cities",

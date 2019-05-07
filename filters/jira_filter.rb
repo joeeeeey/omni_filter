@@ -4,6 +4,12 @@ class JiraFilter
   JIRA_HOST = 'https://oslcorp.atlassian.net/browse/'  
 
   class << self
+    def get_icon
+      {
+        :path => "jira.png"
+      }
+    end
+
     def do_filter(key)
       cache_dir_path = File.expand_path('~/Library/Caches/student.com.workflow.alfred')
 
@@ -42,7 +48,8 @@ class JiraFilter
             {
               :title => "ZEN-#{key}",
               :subtitle => "Ticket number '#{key}' maynot valid. But you can still press enter and go.",
-              :arg => "#{JIRA_HOST}ZEN-#{key}"
+              :arg => "#{JIRA_HOST}ZEN-#{key}",
+              :icon => get_icon
             }
           ]
         end
@@ -52,6 +59,7 @@ class JiraFilter
           items << {
             :title => "No search histroy",
             :subtitle => "Begin search...",
+            :icon => get_icon
           }
         else 
           sort_cache_data(cache_data).each do |x|
@@ -59,7 +67,8 @@ class JiraFilter
               :title => "ZEN-#{x[:id]}",
               :subtitle => "First search at: " + (x[:created_at]),
               :arg => "#{JIRA_HOST}ZEN-#{x[:id]}",
-              :autocomplete => x[:id]
+              :autocomplete => x[:id],
+              :icon => get_icon
             }
           end
         end
@@ -88,7 +97,8 @@ class JiraFilter
           :title => "ZEN-#{k}",
           :subtitle => "Press enter to go: #{JIRA_HOST}ZEN-#{k}",
           :arg => "#{JIRA_HOST}ZEN-#{k}",
-          :autocomplete => k
+          :autocomplete => k,
+          :icon => get_icon
         }
       end
       return items

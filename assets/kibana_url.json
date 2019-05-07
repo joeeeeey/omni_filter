@@ -1,0 +1,6 @@
+{
+  "ap-stage": "https://logging-kibana-ap.dandythrust.com/app/kibana#/discover",
+  "cn-stage": "https://logging-kibana-cn.dandythrust.com/app/kibana#/discover",
+  "cn-prod": "https://logging-kibana-cn.student.com/app/kibana#/discover",
+  "ap-prod": "https://logging-kibana-ap.student.com/app/kibana#/discover"
+}

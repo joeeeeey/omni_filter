@@ -42,5 +42,6 @@
   "commute-time-service": "commute-time-service",
   "lead-gen-partners-service": "lead-gen-partners-service",
   "email-relay-service": "email-relay-service",
-  "platform-gateway": "platform-gateway"
+  "platform-gateway": "platform-gateway",
+  "system-integration": "system-integration"
 }

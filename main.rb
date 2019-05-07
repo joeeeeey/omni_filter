@@ -4,10 +4,10 @@ begin
   require_relative './utils/output'
   require_relative './filters/color_filter'
   require_relative './filters/all_keys_filter'
-  require_relative './filters/url_filter'
+  require_relative './filters/sites_filter'
   require_relative './filters/jira_filter'
-  require_relative './filters/github_filter'
-  # require_relative './filters/vscode_filter'
+  require_relative './filters/url_filters/github_filter'
+  require_relative './filters/url_filters/kibana_filter'
   require_relative './filters/ide_filters/vscode_filter'
   require_relative './filters/ide_filters/sublime_filter'
   require_relative './filters/ide_filters/idea_filter'
@@ -31,8 +31,9 @@ begin
   case category
   when 'color' then ColorFilter.do_filter(key)
   when 'allkeys' then AllKeysFilter.do_filter(key)
-  when 'stt' then UrlFilter.do_filter(key, argParams)
+  when 'stt' then SitesFilter.do_filter(key, argParams)
   when 'stji', 'jira' then JiraFilter.do_filter(key)
+  when 'kia', 'kibana' then KibanaFilter.do_filter(key)
   when 'stgh' then GithubFilter.do_filter(key)
   when 'code' then VscodeFilter.do_filter(key)
   when 'subl' then SublimeFilter.do_filter(key)

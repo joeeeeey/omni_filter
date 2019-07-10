@@ -43,5 +43,7 @@
   "lead-gen-partners-service": "lead-gen-partners-service",
   "email-relay-service": "email-relay-service",
   "platform-gateway": "platform-gateway",
-  "system-integration": "system-integration"
+  "system-integration": "system-integration",
+  "cms-facade": "cms-facade",
+  "devops": "devops"
 }

@@ -1,18 +1,14 @@
 {
-  "stage": "https://hurricane-cn.dandythrust.com/",
-  "stage-www": "https://hurricane-www.dandythrust.com/",
-  "prod": "https://cn.student.com/",
-  "uat": "https://uat1-cn.dandythrust.com/",
-  "uat-www": "https://uat1-www.dandythrust.com/", 
+  "st-stage-cn": "https://hurricane-cn.dandythrust.com/",
+  "st-stage-www": "https://hurricane-www.dandythrust.com/",
+  "st-prod-cn": "https://cn.student.com/",
+  "st-prod-www": "https://www.student.com/",
+  "st-uat1-cn": "https://uat1-cn.dandythrust.com/",
+  "st-uat1-www": "https://uat1-www.dandythrust.com/", 
   "dev-srp-v2": "http://127.0.0.1:3001/uk/london", 
   "dev-srp": "http://127.0.0.1:8202/uk/liverpool",
   "dev-srp-www": "http://127.0.0.1:8201/ja-jp/uk/london",
-  "dev-pp": "http://127.0.0.1:8302/uk/london/p/pure-city",
-  "dev-pp-www": "http://127.0.0.1:8301/zh-cn/uk/london/p/nido-west-hampstead",
   "dev-ppv2": "http://localhost:3000/uk/london/p/the-arcade",
-  "dev-sp": "http://127.0.0.1:8602/my-account/dashboard",
-  "dev-sp-www": "http://127.0.0.1:8601/my-account/dashboard",
-  "dev-student-portal": "http://127.0.0.1:8602/my-account/dashboard",
-  "dev-student-portal-www": "http://127.0.0.1:8601/my-account/dashboard",
-  "dev-hp": "http://127.0.0.1:8102/"
+  "pms-stage": "https://content.dandythrust.com/login?redirectUrl=%2Fproperties",
+  "pms-prod": "https://content.student.com/login?redirectUrl=%2Fproperties"
 } 

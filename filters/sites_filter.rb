@@ -1,10 +1,11 @@
 require 'json'
 require 'net/http'
 require_relative '../utils/output'
+require_relative './url_filters/url_base_filter'
 
 # ENV
 # 1.dev 2.uat 3.stage 4.prod
-class SitesFilter
+class SitesFilter < UrlBaseFilter
   CN_API_HOST = 'https://cn.student.com/autocomplete'
   DATA_KEYS = [
     "cities",
@@ -113,24 +114,6 @@ class SitesFilter
         end
       end
       return urlSuffix
-    end
-    
-    # 根据 input 内容过滤 json 中的 key
-    def get_matched_keys(urlMapping, input_key)
-      input_key = input_key.downcase
-      matchedKeys = []
-      if urlMapping[input_key]
-        matchedKeys << input_key
-      else
-        # 相似匹配
-        # TODO 更智能
-        urlMapping.keys.each do |urlMappingKey|
-          if urlMappingKey.include? input_key
-            matchedKeys << urlMappingKey
-          end
-        end
-      end
-      return matchedKeys
     end
   end
 end

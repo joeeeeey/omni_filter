@@ -45,5 +45,6 @@
   "platform-gateway": "platform-gateway",
   "system-integration": "system-integration",
   "cms-facade": "cms-facade",
-  "devops": "devops"
+  "devops": "devops",
+  "frontend-facade":"frontend-facade"
 }

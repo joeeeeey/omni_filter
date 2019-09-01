@@ -6,6 +6,7 @@ begin
   require_relative './filters/all_keys_filter'
   require_relative './filters/sites_filter'
   require_relative './filters/jira_filter'
+  require_relative './filters/str_operation'
   require_relative './filters/url_filters/github_filter'
   require_relative './filters/url_filters/kibana_filter'
   require_relative './filters/ide_filters/vscode_filter'
@@ -13,6 +14,7 @@ begin
   require_relative './filters/ide_filters/idea_filter'
   require_relative './filters/ide_filters/pycharm_filter'
   require_relative './extension/hash'
+  require_relative './extension/string'
   require 'fileutils'
 
   # Notice: 英文 ',' 来分隔参数
@@ -39,6 +41,8 @@ begin
   when 'subl' then SublimeFilter.do_filter(key)
   when 'idea' then IdeaFilter.do_filter(key)
   when 'pcm' then PycharmFilter.do_filter(key)
+  when 'str_operation' then StrOperationFilter.do_filter(key)
+  when 'single_quoto_str_operation' then SingleQuotoStrOperationFilter.do_filter(key)
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 

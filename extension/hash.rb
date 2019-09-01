@@ -2,7 +2,12 @@ require 'xml/libxml'
 # adapted from 
 # http://movesonrails.com/articles/2008/02/25/libxml-for-active-resource-2-0
 
-class Hash 
+class Hash
+  def extract_subhash(*extract)
+    h2 = self.select{|key, value| extract.include?(key) }
+    h2
+  end
+
   class << self
     def from_libxml(xml, strict=true) 
       begin

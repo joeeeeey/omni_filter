@@ -27,3 +27,9 @@ test_idea:
 
 test_pycharm:
 	/usr/bin/ruby main.rb "pcm,r";
+
+test_string_operation:
+	/usr/bin/ruby main.rb "str_operation,da\".do";
+
+single_quoto_str_operation:
+	/usr/bin/ruby main.rb "single_quoto_str_operation,da\'.u";

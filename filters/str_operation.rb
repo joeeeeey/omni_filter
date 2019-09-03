@@ -1,27 +1,30 @@
 require_relative '../utils/output'
 
-class Hash
-  def extract_subhash(*extract)
-    h2 = self.select{|key, value| extract.include?(key) }
-    h2
-  end
-end
-
 class StrOperationFilter
   METHODS_LIST = [
-    {display_name: 'uppercase', proxy_method: 'upcase', des: 'Upcase.'},
-    {display_name: 'downcase', proxy_method: 'downcase', des: 'Downcase.' },
     {display_name: 'base64_decode', proxy_method: 'base64_decode', des: 'base64 decode.' },
     {display_name: 'base64_encode', proxy_method: 'base64_encode', des: 'base64 encode.' },
-    {display_name: 'lower', proxy_method: 'downcase', des: 'Downcase.' },
-    {display_name: 'daxie', proxy_method: 'upcase', des: 'Upcase.' },
-    {display_name: 'xiaoxie', proxy_method: 'downcase', des: 'Downcase.' },
+    {display_name: 'uppercase', proxy_method: 'upcase', des: 'Upcase.'},
+    {display_name: 'downcase', proxy_method: 'downcase', des: 'Downcase.' },
+    # {display_name: 'camel_case_capital', proxy_method: 'camel_case_capital', des: 'Convert to Camel case' },
+    {display_name: 'camel_case_lower', proxy_method: 'camel_case_lower', des: 'Camel case with lower letter start.' },
+    {display_name: 'underscore', proxy_method: 'underscore', des: 'underscore' },
+    # {display_name: 'lower', proxy_method: 'downcase', des: 'Downcase.' },
+    # {display_name: 'daxie', proxy_method: 'upcase', des: 'Upcase.' },
+    # {display_name: 'xiaoxie', proxy_method: 'downcase', des: 'Downcase.' },
+    # {display_name: 'xiahuaxian', proxy_method: 'underscore', des: 'underscore.' },
   ]
 
   METHODS_MAPPING = {}
   METHODS_LIST.each { |x| METHODS_MAPPING[x[:display_name]] = x }
 
   class << self
+    def get_icon
+      {
+        :path => "doughnut.png"
+      }
+    end
+
     def do_filter(key)
       if key && key != ''
         items = get_items(key)
@@ -29,6 +32,7 @@ class StrOperationFilter
       else
         item = {
           :title => "Waiting input..",
+          :icon => get_icon,
         }
         Output.put(item)
       end
@@ -59,7 +63,7 @@ class StrOperationFilter
           items = extracted_methods_mapping.values
 
           if items.size == 0
-            items = [{ :title => "This method is not provided" }]
+            items = [{ :title => "This method is not provided", :icon => get_icon }]
           elsif items.size == 1
             # do the method
             result = opeation_str.send(items[0][:proxy_method])
@@ -68,23 +72,25 @@ class StrOperationFilter
               # :subtitle => "type COMMAND+C or ENTER to copy result",
               :arg => result,
               :autocomplete => input_key[0..last_quot_index+1] + items[0][:display_name],
+              :icon => get_icon,
             }
           else
             return items.map {|x| 
-              # result = opeation_str.send(x[:proxy_method])
+              result = opeation_str.send(x[:proxy_method])
               {
               :title => x[:display_name],
-              # :subtitle => "Result is: #{result}",
-              :arg => x[:proxy_method],
+              :subtitle => "Result is: #{result}",
+              :arg => result,
               :autocomplete => input_key[0..last_quot_index+1] + x[:display_name],
+              :icon => get_icon,
             }
            }
           end
         else
-          items = [{ :title => "Waiting input.." }]
+          items = [{ :title => "Waiting input..", :icon => get_icon, }]
         end
       else
-        items = [{ :title => "Waiting input.." }]
+        items = [{ :title => "Waiting input..", :icon => get_icon, }]
       end
       return items
     end

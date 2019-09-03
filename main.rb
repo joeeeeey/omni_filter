@@ -41,8 +41,8 @@ begin
   when 'subl' then SublimeFilter.do_filter(key)
   when 'idea' then IdeaFilter.do_filter(key)
   when 'pcm' then PycharmFilter.do_filter(key)
-  when 'str_operation' then StrOperationFilter.do_filter(key)
-  when 'single_quoto_str_operation' then SingleQuotoStrOperationFilter.do_filter(key)
+  when 'str_operation' then StrOperationFilter.do_filter(args.join(','))
+  when 'single_quoto_str_operation' then SingleQuotoStrOperationFilter.do_filter(args.join(','))
   else
     item = {
       :title => 'Whoop! An unknow keyword.', 

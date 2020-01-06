@@ -54,6 +54,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>450C4760-6555-4906-A30A-26F8247571EC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57CF52E7-5D07-445D-B912-657419AFFA26</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>460C290D-AB03-4294-995A-1148189C4D4B</key>
 		<array>
 			<dict>
@@ -246,6 +259,12 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -282,7 +301,7 @@
 			<key>uid</key>
 			<string>icon</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -299,13 +318,19 @@
 			<key>uid</key>
 			<string>6125569B-F80C-4518-8375-F06908039270</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -342,13 +367,19 @@
 			<key>uid</key>
 			<string>color_filter</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -385,13 +416,19 @@
 			<key>uid</key>
 			<string>C1B83D91-1E27-40DB-8F21-1E8B256EA320</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -428,13 +465,19 @@
 			<key>uid</key>
 			<string>6824A191-142F-40D6-A80E-871F9B254A04</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -471,7 +514,7 @@
 			<key>uid</key>
 			<string>87A559E4-1751-4378-A99E-5F40F391FC8A</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -522,6 +565,12 @@ open -a "`ls -dt /Applications/Visual\ Studio\ Code.app*|head -1`" "$query"</str
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -558,7 +607,7 @@ open -a "`ls -dt /Applications/Visual\ Studio\ Code.app*|head -1`" "$query"</str
 			<key>uid</key>
 			<string>460C290D-AB03-4294-995A-1148189C4D4B</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -590,6 +639,12 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -626,13 +681,19 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>jira</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -669,13 +730,19 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>2FF12C66-513B-4502-BE18-8106A9169525</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -712,7 +779,7 @@ open -a "`ls -dt /Applications/IntelliJ\ IDEA*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>stj</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -763,6 +830,12 @@ open -a "`ls -dt /Applications/PyCharm.app*|head -1`" "$query"</string>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -799,13 +872,19 @@ open -a "`ls -dt /Applications/PyCharm.app*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>95132ABC-8907-4D39-B228-4D9EF25A6AF8</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -842,13 +921,19 @@ open -a "`ls -dt /Applications/PyCharm.app*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>github_logo</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -885,7 +970,56 @@ open -a "`ls -dt /Applications/PyCharm.app*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>DAAA78B9-EF63-40EC-B8FB-18FBB7C155D3</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>g6g</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>搜索{query}中…</string>
+				<key>script</key>
+				<string> /usr/bin/ruby main.rb "g6g,{query}"; </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Go to github g66...</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>450C4760-6555-4906-A30A-26F8247571EC</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -917,6 +1051,12 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -953,13 +1093,19 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>kibana_logo</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -996,7 +1142,7 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<key>uid</key>
 			<string>00092187-007C-47C1-99C6-6C2568AD3E48</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -1030,6 +1176,13 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<integer>840</integer>
 			<key>ypos</key>
 			<integer>750</integer>
+		</dict>
+		<key>450C4760-6555-4906-A30A-26F8247571EC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>695</integer>
 		</dict>
 		<key>460C290D-AB03-4294-995A-1148189C4D4B</key>
 		<dict>

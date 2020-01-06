@@ -1,0 +1,12 @@
+{
+  "devops": "devops",
+  "platform-common": "platform-common",
+  "projectg-bookings-service": "projectg-bookings-service",
+  "projectg-configurations-service": "projectg-configurations-service",
+  "projectg-fe-base": "projectg-fe-base",
+  "projectg-fe-pms": "projectg-fe-pms",
+  "projectg-gateway": "projectg-gateway",
+  "projectg-prices-service": "projectg-prices-service",
+  "projectg-properties-service": "projectg-properties-service",
+  "projectg-users-service": "projectg-users-service"
+}

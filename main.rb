@@ -37,6 +37,7 @@ begin
   when 'stji', 'jira' then JiraFilter.do_filter(key)
   when 'kia', 'kibana' then KibanaFilter.do_filter(key)
   when 'stgh' then GithubFilter.do_filter(key)
+  when 'g6g' then G6GFilter.do_filter(key)
   when 'code' then VscodeFilter.do_filter(key)
   when 'subl' then SublimeFilter.do_filter(key)
   when 'idea' then IdeaFilter.do_filter(key)

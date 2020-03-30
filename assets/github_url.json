@@ -47,5 +47,7 @@
   "cms-facade": "cms-facade",
   "devops": "devops",
   "frontend-facade": "frontend-facade",
-  "platform-common": "platform-common"
+  "platform-common": "platform-common",
+  "microapp-static-pages-v2": "microapp-static-pages-v2",
+  "microapp-openresty": "microapp-openresty"
 }

@@ -545,6 +545,8 @@
 				<key>script</key>
 				<string>query='{query}'
 
+
+echo "$query" &gt;&gt; /Users/joeeey/asd.log
 open -a "`ls -dt /Applications/Visual\ Studio\ Code.app*|head -1`" "$query"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -1304,6 +1306,10 @@ open -a "`ls -dt /Applications/Sublime\ Text.app*|head -1`" "$query"</string>
 			<integer>500</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>joeeey9303@gmail.com</string>
 </dict>
